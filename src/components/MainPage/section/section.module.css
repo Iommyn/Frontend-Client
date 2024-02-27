@@ -1,0 +1,65 @@
+.main {
+    @apply mt-[230px]
+}
+
+.main_servers {
+    @apply relative before:bg-[url('../../../assets/before_after/servers.svg')] before:bg-no-repeat before:bg-left before:absolute before:block before:left-[30px] before:right-0 before:top-0 before:h-[130px]
+}
+
+.container {
+    @apply w-[1160px] my-0 mx-auto
+}
+
+.section_title {
+    @apply flex justify-between items-center mb-[74px]
+}
+
+.h2 {
+    @apply text-[42px] items-center flex mb-[30px] text-white mt-8 before:bg-[url('../../../assets/before_after/panels/color-blue/line_three.svg')] before:w-[69px] before:h-[73px] before:bg-no-repeat before:block before:mr-[12px] before:bg-contain
+}
+
+
+.play_with_friends {
+    @apply pb-[230px] relative before:bg-[url('../../../assets/before_after/play.svg')] before:bg-no-repeat before:bg-left before:absolute before:block before:left-[30px] before:right-0 before:h-[240px] before:top-[40px]
+}
+
+
+.container {
+    @apply w-[1160px] my-0 mx-auto
+}
+
+.section_title__play {
+    @apply flex justify-between text-white items-center mb-[74px] pt-[85px]
+}
+
+
+.h2_play {
+    @apply text-[42px] items-center flex mb-[30px] text-white mt-8 before:bg-[url('../../../assets/before_after/panels/color-blue/h-elements.svg')] before:w-[69px] before:h-[73px] before:bg-no-repeat before:block before:mr-[12px] before:bg-contain
+}
+
+.socials {
+    @apply flex justify-between
+}
+
+.socials_vk {
+    @apply bg-socials-gradient-vk w-calc-100 flex flex-wrap h-[260px] rounded-[8px] justify-center content-center
+}
+
+.social_img {
+    @apply w-[64px] h-[64px] flex items-center justify-center
+}
+
+
+.social_title {
+    @apply w-[100%] text-center mt-[12px] text-[28px] text-white mb-[26px]
+}
+
+.social_link {
+    @apply bg-socials-gradient-ds  text-[16px] py-[10px] px-[35px] rounded-[6px] flex items-center transition-opacity duration-0.3s hover:text-white hover:bg-footer-gradient before:w-[24px] before:h-[24px] before:block before:bg-[url('../../../assets/section_socials/open.svg')] before:bg-no-repeat before:bg-center before:bg-contain before:mr-[10px]
+}
+
+
+
+.socials_ds {
+    @apply bg-socials-gradient-ds w-calc-100 flex flex-wrap h-[260px] rounded-[8px] justify-center content-center
+}

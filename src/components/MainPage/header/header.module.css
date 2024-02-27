@@ -1,0 +1,70 @@
+/**
+* Here are the styles written in TailwindCSS.
+* I divided the code with intervals,
+* and wrote comments about where the wrapper is,
+* where the information is, where what components are.
+* Don't get lost)
+**/
+
+
+/* Here the wrapper for header is the header of the header page. */
+
+.sliderBlock {
+    @apply relative pb-[250px] pt-[90px] before:bg-[url('../../../assets/before_after/panels/color-purple/elements.svg')] before:bg-no-repeat before:absolute before:h-[1000px] before:right-0 before:left-0 before:bg-contain
+}
+
+.wrapper {
+    @apply mx-auto w-[1160px]
+}
+
+.slider {
+    @apply relative
+}
+
+.slide {
+    @apply flex justify-between items-center
+}
+
+
+
+
+/* MainPage information about the site */
+
+.slide__info {
+    @apply flex-shrink-0  relative after:bg-[url('../../../assets/before_after/panels/color-blue/elements.svg')] after:block after:w-[130px] after:h-[100px] after:right-[-90px] after:top-[-40px] after:absolute
+}
+
+.slide__info > h1 {
+    @apply mb-3 text-base tracking-wider text-gray-400 uppercase font-ProximBold leading-[1.3em]
+}
+
+.slide__info > h2 {
+    @apply mb-7 text-[64px] text-white font-ProximExtraBold -tracking-tighter leading-[1.15em]
+}
+
+.slide__info > h3 {
+    @apply text-2xl text-gray-400 font-ProximSemiBold leading-[1.3em] mb-[40px]
+}
+
+
+.button {
+    @apply font-ProximBold mt-[50px] px-[200px] py-4 border-none text-2xl bg-gradient-to-r from-blue-700 to-purple-700 rounded-md hover:bg-gradient-to-b hover:text-white
+}
+
+
+.slide_img {
+    @apply mr-[-275px] w-[760px]
+}
+
+
+
+
+/* Here I was completely burned out and decided to write down the usual styles. I hope everything is clear :D */
+
+.online_amount {
+    @apply absolute left-calc-620 bottom-[60px] bg-online-amount-rgba backdrop-blur-[80px] py-[25px] px-[35px] rounded-[8px]
+}
+
+.online_amount__amount {
+    @apply text-white text-[18px] flex items-center before:w-[8px] before:h-[8px] before:rounded-[50px] before:bg-online-amount before:block before:mr-[10px]
+}

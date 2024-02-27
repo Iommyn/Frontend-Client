@@ -1,0 +1,37 @@
+.slider {
+    @apply flex justify-center items-center mb-[230px]
+}
+
+.information {
+    @apply relative flex flex-col items-center
+}
+
+.button {
+    @apply bg-gray-800 h-[55px] w-[55px] py-0 pl-[23px] rounded-xl disabled:cursor-pointer ease-in-out hover:-translate-y--25
+}
+
+.server {
+    @apply py-0 px-[40px] rounded-[60px]
+}
+
+.h3 {
+    @apply absolute top-[447px] text-gray-500 text-[18px]
+}
+
+.h1 {
+    @apply absolute top-[475px] text-white text-[28px]
+}
+
+
+.server_progress__online {
+    @apply h-[3px] bg-progress-online mt-[10px] w-[276px] top-[529px] rounded-[27px] overflow-hidden absolute
+}
+
+.server_status {
+    @apply flex items-center top-[545px] mb-[42px] absolute before:block before:w-[8px] before:h-[8px] before:rounded-[50%] before:mr-[10px] before:bg-server-status
+}
+
+
+.online {
+    @apply text-[16px] text-white
+}

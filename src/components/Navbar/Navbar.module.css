@@ -1,0 +1,98 @@
+/**
+* Here I did the after and before,
+* but it was done through the div tag,
+* it could have been done differently.
+* But the code would not be colorful
+**/
+
+.pink_circle {
+    @apply absolute top-28 right-0 left-0 h-[1000px] bg-[url('../../assets/before_after/glows/purple.svg')] bg-no-repeat bg-contain
+}
+
+.Glow_Blue {
+    @apply absolute top-0 right-[-310px] left-0 h-[1000px] bg-[url('../../assets/before_after/glows/blue.svg')] bg-no-repeat bg-contain bg-right
+}
+
+
+
+/** Wrapper for navigation **/
+
+.nav {
+    @apply relative
+}
+
+.wrapper {
+    @apply pt-[30px] my-0 mx-auto w-[1160px]
+}
+
+.nav_list {
+    @apply flex justify-between items-center
+}
+
+
+
+/** Navigation. Styles for links **/
+
+.NavbarLinks {
+    @apply relative items-center space-x-[45px] text-lg
+}
+
+.NavbarLinks > a {
+    @apply text-lg hover:transition delay-150 duration-100 ease-in-out
+}
+
+
+
+/**  Authorization and registration buttons for the Navbar **/
+
+.NavAuthReg {
+    @apply flex items-center relative
+}
+
+.auth {
+    @apply text-[18px] mr-[30px] ml-12 hover:transition duration-100 ease-in-out
+}
+
+.reg {
+    @apply ml-[10px] text-[18px] py-[15px] px-[35px] bg-gray-700 rounded-md hover:bg-gray-800 hover:text-white duration-100 ease-in-out
+}
+
+
+
+
+ /*
+ * Menu for expanding the link ("Серверы"),
+ * DropDowns is Logout
+ */
+
+.Button {
+    @apply inline-flex cursor-pointer delay-150
+}
+
+.dropdown {
+    @apply relative inline-block
+}
+
+.dropdownContent {
+    @apply pb-5 border-t-4 border-x-2 border-gray-600 my-2 mx-[-100px] absolute rounded-[6px] cursor-default right-0 z-10 pt-6 px-10 w-auto h-auto max-h-[300px] overflow-y-auto bg-dropdowns-bg text-[16px]
+}
+
+.ItemTitleLogout {
+    @apply text-item-title text-[20px] hover:text-item-title-hover
+}
+
+.ItemTitle {
+    @apply text-item-title text-[20px]
+}
+
+.Item {
+    @apply hover:text-footer-color scale-110 text-[17px] py-1 pl-2 inline-block font-medium
+}
+
+
+
+
+.dropdownContents {
+    @apply pb-2 border-t-4 border-x-2 border-gray-600 my-2 mx-[-10px] absolute rounded-[6px] cursor-default right-0 z-10 pt-6 px-8 w-[190px] h-[178px] bg-dropdowns-bg text-[16px]
+}
+

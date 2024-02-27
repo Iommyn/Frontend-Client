@@ -1,0 +1,53 @@
+.footer {
+    @apply mt-[100px]
+}
+
+.wrapper {
+    @apply relative py-[43px] px-0 before:top-0 before:absolute before:block before:h-[3px] before:left-0 before:right-0 before:bg-footer-gradient after:top-[240px] after:absolute after:block after:h-[3px] after:left-0 after:right-0 after:bg-footer-gradient
+}
+
+.container {
+    @apply w-[1160px] my-0 mx-auto
+}
+
+.content {
+    @apply flex justify-between items-center
+}
+
+.content_logo {
+    @apply w-[78px] mt-10 transition duration-300 cursor-pointer ease-in-out hover:-translate-x-0.5 hover:scale-110
+}
+
+.content__links {
+    @apply flex w-[100%] justify-between
+}
+
+.title {
+    @apply text-footer-color text-[18px] mb-[24px]
+}
+
+.socials {
+    @apply flex
+}
+
+
+.social_ds {
+    @apply w-[24px] h-[24px] flex items-center ease-in-out hover:-translate-y-0.5 hover:scale-110 mr-[16px] transition duration-300  cursor-pointer
+}
+
+.social_vk {
+    @apply w-[24px] h-[24px] flex items-center ease-in-out hover:-translate-y-0.5 hover:scale-110 mr-[16px] transition duration-300  cursor-pointer
+}
+
+.link_a {
+    @apply mb-[12px] cursor-pointer block hover:text-link-gradient
+}
+
+.copy {
+    @apply py-[24px] pb-[40px]
+}
+
+.copyright {
+    @apply text-footer-color block
+}
+
