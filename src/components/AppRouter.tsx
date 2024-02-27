@@ -3,8 +3,10 @@ import { privateRoutes, publicRoutes } from '../router/index';
 import { useEffect, useState } from "react";
 import Loader from "./UI/Loader/Loader";
 import React from 'react';
+import {useAuth} from "../hooks/useAuth";
+
 const AppRouter = () => {
-    const isAuth: boolean = false;
+    const isAuth = useAuth();
 
     const [isLoading, setLoading] = useState(true);
     const location = useLocation();

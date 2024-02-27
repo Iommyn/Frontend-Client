@@ -1,4 +1,4 @@
-import {BrowserRouter, Navigate, useNavigate} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import AppRouter from './components/AppRouter';
 import './App.css';
 import React, {useEffect} from 'react';
@@ -16,7 +16,6 @@ export default function App() {
     useEffect(() => {
         const token = getTokenFromLocalStorage();
         if (token) {
-            const navigate = useNavigate()
             const tokenExpiration = JSON.parse(localStorage.getItem('tokenExpiration'));
             const currentTime = new Date().getTime();
             if (currentTime > tokenExpiration) {
@@ -25,7 +24,6 @@ export default function App() {
                 localStorage.removeItem('tokenExpiration');
                 localStorage.removeItem('isAuth');
                 toast.info('Срок действия токена истек, пожалуйста, авторизуйтесь снова');
-                navigate('/auth')
             } else {
                 const user: IUser = {token};
                 dispatch(login(user));
