@@ -5,6 +5,7 @@
       "@assets/*": ["src/assets/*"]
     },
     "module": "esnext",
+    "lib": ["ES2015", "DOM"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "moduleResolution": "node",

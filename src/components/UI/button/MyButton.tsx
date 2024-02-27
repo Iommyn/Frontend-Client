@@ -3,7 +3,10 @@ import s from './MyButton.module.css';
 
 const MyButton = ({children, ...props}) => {
     return (
-        <button {...props} className={s.myBtn}>
+        <button
+            {...props}
+            className={s.myBtn}
+            style={{ outline: 'none', border: 'none' }}>
             {children}
         </button>
     );

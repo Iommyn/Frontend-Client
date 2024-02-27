@@ -1,3 +1,9 @@
 .myInput {
-    @apply  h-[47px] pl-[13px] w-[429px] my-[15px] bg-dropdowns-bg text-white rounded-[6px] border-2 border-dropdowns-bg
+    @apply  h-[47px] pl-[13px] w-[429px] my-[15px] bg-transparent text-white rounded-[6px] border-[1px] border-input-border
+
+}
+
+.myInput:focus {
+    border-color: #8fa2ff;
+    box-shadow: 0 0 10px #8fa2ff;
 }

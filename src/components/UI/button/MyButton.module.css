@@ -8,3 +8,9 @@
     margin-top: 25px;
     margin-bottom: 30px;
 }
+
+.myBtn:hover {
+    transition: .3s;
+    border-color: #9008FE;
+    box-shadow: 0 0 14px #0C83FF;
+}

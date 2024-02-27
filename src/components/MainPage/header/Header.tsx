@@ -3,6 +3,7 @@ import s from "../header/header.module.css";
 import { Link } from 'react-router-dom';
 import slideImage from '../../../assets/page_home/slide-image.png'
 import React from "react";
+import MyButton from "../../UI/button/MyButton";
 
 export default function Header() {
     return (
@@ -14,7 +15,7 @@ export default function Header() {
                     <h1>СДЕЛАНО ДЛЯ ТЕБЯ :)</h1>
                     <h2>Ваш новый дом <br/>в Minecraft</h2>
                     <h3>Нам уже больше 4 лет, мы делали этот проект<br/> с любовью. Этот проект для всех.</h3>
-                    <Link to='/play' className={s.button}>Ого, играть</Link>
+                    <Link to='/play'><button className={s.button}> Ого, играть</button></Link>
                 </div>
                 <div className={s.slide_img}><img src={slideImage}/></div>
             </div>

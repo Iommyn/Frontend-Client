@@ -42,6 +42,7 @@ export default {
         'download-link': '#516DFF',
         'dropdowns-bg': '#141417',
         'webview-link': 'rgba(40, 140, 255, 1)',
+        'input-border': 'rgba(111, 127, 168, 0.4)'
       },
       fontFamily: {
         'ProximBold': ['ProximBold'],
