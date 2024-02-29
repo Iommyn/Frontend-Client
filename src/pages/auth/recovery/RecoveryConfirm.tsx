@@ -5,6 +5,7 @@ import {Link, useNavigate} from "react-router-dom";
 import Logo from '../../../assets/icons/Logout_logo.png'
 import MyInput from "../../../components/UI/input/MyInput";
 import MyButton from "../../../components/UI/button/MyButton";
+import s from "./recovery.module.css";
 
 const RecoveryConfirm = () => {
     const navigate = useNavigate()
@@ -15,7 +16,7 @@ const RecoveryConfirm = () => {
     const registerConfirmHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         try {
             e.preventDefault();
-            const data = await AuthService.Recovered({code, password});
+            const data = await AuthService.RecoveredConfirm({code, password});
             if (data) {
                 toast.warning('Вы успешно изменили пароль!');
                 navigate('/auth');
@@ -26,13 +27,13 @@ const RecoveryConfirm = () => {
     }
 
     return (
-        <section className='h-[100px] mb-[380px] pt-56'>
+        <section className={s.section}>
             <div className='mb-[70px] flex justify-center'>
                 <Link to="/">
                     <img src={Logo} alt="Логотип"/>
                 </Link>
             </div>
-            <h1 className='text-footer-color text-center text-[25px] font-bold mt-[12px] mb-[30px]'>
+            <h1 className={s.h1_Confirm}>
                 Потверждение кода
             </h1>
             <form className='flex justify-center mt-2' onSubmit={registerConfirmHandler}>

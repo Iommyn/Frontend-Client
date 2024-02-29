@@ -30,3 +30,29 @@
     }
 }
 
+.title {
+    @apply text-center font-ProximBold text-webview-link mt-12 text-[40px]
+}
+
+.information {
+    @apply text-center  font-ProximSemiBold text-footer-color mt-4 text-[43px]
+}
+
+.preloader {
+    @apply min-h-[140vh]
+}
+
+
+@media (max-width: 480px ) {
+    .title {
+        @apply text-[20px]
+    }
+    .information {
+        @apply text-[15px] mb-10
+    }
+
+    .spinner {
+        @apply w-[40px] h-[40px]
+    }
+}
+

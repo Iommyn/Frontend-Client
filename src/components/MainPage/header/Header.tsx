@@ -12,9 +12,9 @@ export default function Header() {
                     <div className={s.slider}>
                         <div className={s.slide}>
                             <div className={s.slide__info}>
-                                <h1>СДЕЛАНО ДЛЯ ТЕБЯ :)</h1>
-                                <h2>Ваш новый дом <br/>в Minecraft</h2>
-                                <h3>Нам уже больше 4 лет, мы делали этот проект<br/> с любовью. Этот проект для всех.</h3>
+                                <h3>СДЕЛАНО ДЛЯ ТЕБЯ :)</h3>
+                                <h1>Ваш новый дом <br/>в Minecraft</h1>
+                                <h2>Нам уже больше 4 лет, мы делали этот проект<br/> с любовью. Этот проект для всех.</h2>
                                 <Link to='/play'>
                                     <button className={s.button}> Ого, играть</button>
                                 </Link>

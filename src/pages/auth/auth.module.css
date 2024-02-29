@@ -1,0 +1,49 @@
+
+.section {
+    @apply pt-28 min-h-[120vh]
+}
+
+.h1 {
+    @apply text-white text-center text-[42px] font-ProximExtraBold
+}
+
+.h1_input {
+    @apply text-white text-[16px] font-ProximRegular
+}
+
+.h1_captcha {
+    @apply text-white mb-4 mt-2
+}
+
+.captcha {
+    @apply mx-auto mb-4
+}
+
+.registerAkk {
+    @apply text-footer-color mb-4 text-center
+}
+
+
+@media (max-width: 480px ) {
+    .section {
+        @apply pt-10 min-h-[120vh]
+    }
+
+    .h1 {
+        @apply text-[22px]
+    }
+
+    .h1_input {
+        @apply ml-[10px]
+    }
+
+    .h1_captcha {
+        @apply ml-[10px]
+    }
+
+    .registerAkk {
+        @apply flex flex-col
+    }
+}
+
+

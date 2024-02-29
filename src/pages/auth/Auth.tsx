@@ -10,7 +10,7 @@ import {setTokenToLocalStorage} from "../../helpers/localstorage";
 import {useAppDispatch} from "../../store/hooks";
 import {login} from "../../store/user/userSlice";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import s from './auth.module.css'
 
 const Auth: FC = () => {
 
@@ -28,10 +28,7 @@ const Auth: FC = () => {
             e.preventDefault();
 
             // Проверяем, что reCAPTCHA пройдена
-            if (!recaptchaValue) {
-                toast.error('Пожалуйста, пройдите проверку reCAPTCHA');
-                return;
-            }
+
 
             const data = await AuthService.login({username, password});
             if (data) {
@@ -48,44 +45,44 @@ const Auth: FC = () => {
     }
 
     return (
-        <section className='h-[100px] mb-[380px] pt-28'>
+        <section className={s.section}>
             <h1 className='mb-[70px] flex justify-center'>
                 <Link to="/">
                     <img src={Logo} alt="Логотип"/>
                 </Link>
             </h1>
-            <h2 className='text-white text-center text-[42px] font-extrabold'>Вход в аккаунт</h2>
-            <h3 className='text-white text-center text-[16px] font-semibold mt-[12px] mb-[50px]'>Да, я тебя помню,
+            <h2 className={s.h1}>Вход в аккаунт</h2>
+            <h3 className='text-white text-center text-[16px] font-ProximSemiBold mt-[12px] mb-[50px]'>Да, я тебя помню,
                 золота не дам :с</h3>
             <form className='flex justify-center mt-2' onSubmit={loginHandler} >
                 <div className="flex flex-col">
-                    <h1 className='text-white'>Введите Ник</h1>
+                    <h1 className={s.h1_input}>Введите Ник</h1>
                     <MyInput
                         type="text"
                         placeholder="Maskott"
                         onChange={(e) => setUsername(e.target.value)}/>
 
-                    <h1 className='text-white'>Введите пароль</h1>
+                    <h1 className={s.h1_input}>Введите пароль</h1>
                     <MyInput
                         type="password"
                         placeholder="••••••••••••••••"
                         onChange={(e) => setPassword(e.target.value)}/>
 
 
-                        <h1 className='text-white mb-3'>Пройдите проверку</h1>
+                        <h1 className={s.h1_captcha}>Пройдите проверку</h1>
                         <ReCAPTCHA
-                            className='flex justify-center'
+                            className={s.captcha}
                             sitekey="6Leq1IIpAAAAAHCT9atezPoZ1dCcQOFU2Mm9ZUBt"
                             onChange={(value) => setRecaptchaValue(value)}
                         />
 
 
-                    <MyButton>Войти</MyButton>
+                    <MyButton>Войти в аккаунт</MyButton>
 
-                    <h1 className="text-footer-color mb-4 text-center">Забыли создать аккаунт? <Link
+                    <h1 className={s.registerAkk}>Забыли создать аккаунт? <Link
                         className='text-download-link hover:text-download-link' to='/signup'>Зарегистрироваться</Link>
                     </h1>
-                    <h1 className='text-center'><Link className='text-white' to='/recovery'>Забыли пароль?</Link> </h1>
+                    <h1 className='text-center mb-8'><Link className='text-white' to='/recovery'>Забыли пароль?</Link> </h1>
                 </div>
             </form>
         </section>

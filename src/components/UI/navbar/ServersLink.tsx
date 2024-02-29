@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import s from "../../Navbar/Navbar.module.css";
 import {Link} from "react-router-dom";
-import dropdownicon from "../../../assets/icons/dropdownIcon.svg";
+import dropdownIcon from "../../../assets/icons/dropdownIcon.svg";
 import {servers} from "../../../information/servers";
 
 
@@ -15,7 +15,7 @@ export default function ServersLink() {
     return (
         <div className={s.dropdown}>
             <a onClick={toggleDropdown} className={s.Button}>
-                Сервера <img className='pl-2' src={dropdownicon} />
+                Сервера <img className='pl-2' src={dropdownIcon} />
             </a>
 
             {isDropdownOpen && (

@@ -33,7 +33,7 @@ const ProfileLogout: FC = () => {
 
     return (
         <div className={s.dropdown}>
-            <a onClick={toggleDropdown} className={s.Button}> samalet
+            <a onClick={toggleDropdown} className={s.ButtonProfile}> samalet
                 <img className='pl-2' src={dropdownIcon} alt="dropdown icon"/>
             </a>
             {isDropdownOpen && (

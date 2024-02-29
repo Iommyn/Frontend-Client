@@ -7,3 +7,15 @@
     border-color: #8fa2ff;
     box-shadow: 0 0 10px #8fa2ff;
 }
+
+@media (max-width: 320px) {
+    .myInput {
+        @apply  h-[47px] pl-[13px] mx-auto w-[290px] my-[15px] bg-transparent text-white rounded-[6px] border-[1px] border-input-border
+    }
+}
+
+@media (max-width: 480px) {
+    .myInput {
+        @apply  h-[47px] pl-[13px] mx-auto w-[290px] my-[15px] bg-transparent text-white rounded-[6px] border-[1px] border-input-border
+    }
+}

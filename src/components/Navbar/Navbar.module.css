@@ -29,12 +29,17 @@
     @apply flex justify-between items-center
 }
 
+.nav_list2 {
+    @apply flex justify-between items-center
+}
+
+
 
 
 /** Navigation. Styles for links **/
 
 .NavbarLinks {
-    @apply relative items-center space-x-[45px] text-lg
+    @apply relative items-center space-x-[45px] text-lg mr-28 font-ProximRegular
 }
 
 .NavbarLinks > a {
@@ -46,7 +51,7 @@
 /**  Authorization and registration buttons for the Navbar **/
 
 .NavAuthReg {
-    @apply flex items-center relative
+    @apply flex items-center relative font-ProximRegular
 }
 
 .auth {
@@ -60,13 +65,17 @@
 
 
 
- /*
- * Menu for expanding the link ("Серверы"),
- * DropDowns is Logout
- */
+/*
+* Menu for expanding the link ("Серверы"),
+* DropDowns is Logout
+*/
 
 .Button {
     @apply inline-flex cursor-pointer delay-150
+}
+
+.ButtonProfile {
+    @apply inline-flex cursor-pointer delay-150 mr-20 text-footer-color font-ProximSemiBold text-[18px]
 }
 
 .dropdown {
@@ -78,15 +87,15 @@
 }
 
 .ItemTitleLogout {
-    @apply text-item-title text-[20px] hover:text-item-title-hover
+    @apply text-item-title text-[20px] hover:text-item-title-hover font-ProximBold
 }
 
 .ItemTitle {
-    @apply text-item-title text-[20px]
+    @apply text-item-title text-[20px] font-ProximSemiBold
 }
 
 .Item {
-    @apply hover:text-footer-color scale-110 text-[17px] py-1 pl-2 inline-block font-medium
+    @apply hover:text-footer-color scale-110 text-[17px] py-1 pl-2 inline-block font-ProximRegular
 }
 
 
@@ -96,3 +105,116 @@
     @apply pb-2 border-t-4 border-x-2 border-gray-600 my-2 mx-[-10px] absolute rounded-[6px] cursor-default right-0 z-10 pt-6 px-8 w-[190px] h-[178px] bg-dropdowns-bg text-[16px]
 }
 
+
+
+.nav_list3 {
+    @apply hidden
+}
+
+@media (max-width: 1200px) {
+
+    .burger_menu {
+        @apply relative bg-gray-800 rounded-lg border-none cursor-pointer flex justify-center items-center p-3
+    }
+
+    .burger_icon {
+        @apply w-[30px] h-[20px] flex flex-col justify-between
+    }
+
+    .burger_icon span {
+        @apply block w-full h-[4px] rounded-[34px] bg-gray-300 mb-[6px]
+    }
+
+    .logo {
+        @apply h-12 mt-3
+    }
+
+    .burger_menu_items {
+        @apply fixed top-0 left-0 bottom-0 right-0 z-50 bg-gray-950 bg-opacity-50 backdrop-filter backdrop-blur-lg flex flex-col items-center justify-center p-4 rounded-md shadow-md
+    }
+
+    .burger_menu_items a {
+        @apply cursor-pointer py-[8px] px-[16px]
+    }
+
+
+    .close_button {
+        @apply absolute top-10 right-10 cursor-pointer text-white text-2xl px-1 border-none bg-transparent z-10 after:content-['X']
+    }
+
+
+    .NavbarLinks {
+        @apply flex flex-col space-x-[0px] mt-6
+    }
+
+    .dropdownContent {
+        @apply left-12 w-[220px]
+    }
+
+
+    .auth {
+        @apply text-[18px] mr-[30px] ml-12 hover:transition duration-100 ease-in-out
+    }
+
+    .reg {
+        @apply ml-[10px] text-[18px] py-[15px] px-[35px] bg-gray-700 rounded-md hover:bg-gray-800 hover:text-white duration-100 ease-in-out
+    }
+
+
+    .nav_list {
+        @apply mx-8 mt-4 flex
+    }
+
+
+    .nav_list2 {
+        @apply hidden
+    }
+
+    .nav_list3 {
+        @apply mx-8 mt-4 flex
+    }
+
+
+    .wrapper {
+        @apply w-full p-[2px]
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    .auth {
+        @apply text-[15px] mr-[10px] ml-3 hover:transition duration-100 ease-in-out
+    }
+
+    .reg {
+        @apply ml-[10px] text-[15px] py-[10px] px-[12px] bg-gray-700 rounded-md hover:bg-gray-800 hover:text-white duration-100 ease-in-out
+    }
+
+
+    .burger_menu {
+        @apply ml-4 mt-4
+    }
+
+}
+
+@media (max-width: 468px) {
+
+    .NavbarLinks {
+        @apply flex flex-col ml-20 mt-6
+    }
+
+
+    .nav_list {
+        @apply mx-2 mt-4 flex
+    }
+
+    .nav_list3 {
+        @apply mx-auto mt-4 flex
+    }
+
+
+}

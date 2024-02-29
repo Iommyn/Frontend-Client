@@ -3,7 +3,7 @@
 }
 
 .main_servers {
-    @apply relative before:bg-[url('../../../assets/before_after/servers.svg')] before:bg-no-repeat before:bg-left before:absolute before:block before:left-[30px] before:right-0 before:top-0 before:h-[130px]
+    @apply relative before:bg-[url('../../../assets/before_after/servers.png')] before:bg-no-repeat before:bg-left before:absolute before:block before:left-[30px] before:right-0 before:top-0 before:h-[130px]
 }
 
 .container {
@@ -15,7 +15,7 @@
 }
 
 .h2 {
-    @apply text-[42px] items-center flex mb-[30px] text-white mt-8 before:bg-[url('../../../assets/before_after/panels/color-blue/line_three.svg')] before:w-[69px] before:h-[73px] before:bg-no-repeat before:block before:mr-[12px] before:bg-contain
+    @apply text-[42px] font-ProximBold items-center flex mb-[30px] text-white mt-8 before:bg-[url('../../../assets/before_after/panels/color-blue/line_three.svg')] before:w-[69px] before:h-[73px] before:bg-no-repeat before:block before:mr-[12px] before:bg-contain
 }
 
 
@@ -34,7 +34,7 @@
 
 
 .h2_play {
-    @apply text-[42px] items-center flex mb-[30px] text-white mt-8 before:bg-[url('../../../assets/before_after/panels/color-blue/h-elements.svg')] before:w-[69px] before:h-[73px] before:bg-no-repeat before:block before:mr-[12px] before:bg-contain
+    @apply text-[42px] font-ProximBold items-center flex mb-[30px] text-white mt-8 before:bg-[url('../../../assets/before_after/panels/color-blue/h-elements.svg')] before:w-[69px] before:h-[73px] before:bg-no-repeat before:block before:mr-[12px] before:bg-contain
 }
 
 .socials {
@@ -51,15 +51,69 @@
 
 
 .social_title {
-    @apply w-[100%] text-center mt-[12px] text-[28px] text-white mb-[26px]
+    @apply w-[100%] text-center font-ProximBold mt-[12px] text-[28px] text-white mb-[26px]
 }
 
 .social_link {
-    @apply bg-socials-gradient-ds  text-[16px] py-[10px] px-[35px] rounded-[6px] flex items-center transition-opacity duration-0.3s hover:text-white hover:bg-footer-gradient before:w-[24px] before:h-[24px] before:block before:bg-[url('../../../assets/section_socials/open.svg')] before:bg-no-repeat before:bg-center before:bg-contain before:mr-[10px]
+    @apply bg-socials-gradient-ds font-ProximSemiBold  text-[16px] py-[10px] px-[35px] rounded-[6px] flex items-center transition-opacity duration-0.3s hover:text-white hover:bg-footer-gradient before:w-[24px] before:h-[24px] before:block before:bg-[url('../../../assets/section_socials/open.svg')] before:bg-no-repeat before:bg-center before:bg-contain before:mr-[10px]
 }
 
 
 
 .socials_ds {
     @apply bg-socials-gradient-ds w-calc-100 flex flex-wrap h-[260px] rounded-[8px] justify-center content-center
+}
+
+@media (max-width: 768px ) {
+
+    .main_servers {
+        @apply  before:content-none
+    }
+
+    .play_with_friends {
+        @apply  before:content-none
+    }
+
+    .socials {
+        @apply flex flex-col
+    }
+
+    .socials_vk {
+        @apply mb-12 ml-[120px]
+    }
+
+    .socials_ds {
+        @apply ml-[120px]
+    }
+
+}
+
+@media (max-width: 368px ) {
+
+    .h2_play {
+        @apply text-[25px]
+    }
+
+    .main {
+        @apply mt-[130px]
+    }
+
+    .h2 {
+        @apply pb-[2px]
+    }
+
+
+    .socials_vk {
+        @apply mb-12 ml-[35px] w-[300px] h-[200px]
+    }
+
+    .socials_ds {
+        @apply ml-[35px] w-[300px] h-[200px]
+    }
+
+    .social_img {
+        @apply w-[34px] h-[34px]
+    }
+
+
 }

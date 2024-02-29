@@ -1,16 +1,23 @@
 .myBtn {
-    padding: 8px 15px;
-    color: white;
-    font-size: 18px;
-    background: linear-gradient(90deg, #0C83FF 20.83%, #9008FE 100%);
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-bottom: 30px;
+    @apply py-2 px-[15px] my-4 text-[18px] font-ProximSemiBold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg
 }
 
 .myBtn:hover {
     transition: .3s;
     border-color: #9008FE;
     box-shadow: 0 0 14px #0C83FF;
+}
+
+@media (max-width: 320px) {
+    .myBtn {
+        @apply px-20 py-2 mx-auto
+    }
+
+}
+
+@media (max-width: 480px) {
+    .myBtn {
+        @apply px-20 py-2 mx-auto
+    }
+
 }

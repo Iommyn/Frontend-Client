@@ -30,6 +30,11 @@ export const AuthService = {
         return data;
     },
 
+    async RecoveredConfirm(userData: IUserDataRecovery): Promise<any | undefined> {
+        const { data } = await instance.post<IUserData>('/site/recovery/confirm', userData);
+        return data;
+    },
+
 
     async refreshTokenRequest(userData: { refreshToken: string }): Promise<any | undefined> {
         try {

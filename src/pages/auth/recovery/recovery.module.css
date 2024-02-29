@@ -1,0 +1,21 @@
+.section {
+    @apply pt-28 min-h-[100vh]
+}
+
+
+.h1_Confirm {
+    @apply text-white text-center mb-8 text-[32px] font-ProximExtraBold
+}
+
+
+
+@media (max-width: 480px ) {
+    .section {
+        @apply pt-10 min-h-[120vh]
+    }
+
+    .h1 {
+        @apply text-[22px]
+    }
+
+}

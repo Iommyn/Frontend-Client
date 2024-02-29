@@ -1,5 +1,5 @@
 .page {
-    @apply py-[122px] px-0
+    @apply py-[122px] px-0 min-h-[80vh]
 }
 
 .container {
@@ -7,7 +7,7 @@
 }
 
 .page_title {
-    @apply text-[50px] text-white text-center leading-[1.15em] mb-[120px] relative before:bg-[url('../../assets/before_after/panels/color-blue/line_three.svg')] before:w-[89px] before:h-[103px] before:block before:my-0 before:mx-auto before:mb-[12px]
+    @apply text-[64px] font-ProximExtraBold text-white text-center leading-[1.15em] mb-[120px] relative before:bg-[url('../../assets/before_after/panels/color-blue/line_three.svg')] before:w-[89px] before:h-[103px] before:block before:my-0 before:mx-auto before:mb-[12px]
 }
 
 .download_section {
@@ -15,7 +15,7 @@
 }
 
 .download_step__purple {
-    @apply w-[28%] text-center relative after:bg-[url('../../assets/page_play/line_download.svg')] after:bg-no-repeat after:w-[198px] after:h-[12px] after:bg-center after:bg-contain after:block after:absolute after:right-[-148px] after:top-[32px]
+    @apply w-[28%] text-center relative after:bg-[url('../../assets/page_play/line_download.svg')] after:bg-no-repeat after:w-[198px] after:h-[22px] after:bg-center after:bg-contain after:block after:absolute after:right-[-148px] after:top-[32px]
 }
 
 
@@ -24,11 +24,11 @@
 }
 
 .download_step__number {
-    @apply text-footer-color text-[18px] leading-[1.15em] inline-block mb-[24px]
+    @apply text-footer-color font-ProximSemiBold text-[18px] leading-[1.15em] inline-block mb-[24px]
 }
 
 .download_step__p {
-    @apply text-white text-[25px] leading-[1.15em]
+    @apply text-white font-ProximRegular text-[28px] leading-[1.15em]
 }
 
 
@@ -51,7 +51,7 @@
 }
 
 .download_info {
-    @apply mt-[110px] mx-auto my-0 w-fit bg-download-help py-[15px] px-[35px] rounded-[8px]
+    @apply mt-[110px] mx-auto my-0 w-fit text-[19px] font-ProximSemiBold bg-download-help py-[15px] px-[35px] rounded-[8px]
 }
 
 .download_info__span {

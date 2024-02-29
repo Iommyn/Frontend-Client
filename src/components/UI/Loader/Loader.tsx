@@ -7,8 +7,8 @@ const Loader = () => {
             <div className='flex flex-col items-center'>
                 <div className={s.spinner}>
                 </div>
-                <h1 className='text-center text-webview-link mt-12 text-[40px]'>Бот CoreCraft</h1>
-                <h2 className='text-center text-footer-color mt-4 text-[43px]'>Загружает информацию...</h2>
+                <h1 className={s.title}>Бот CoreCraft</h1>
+                <h2 className={s.information}>Загружает информацию...</h2>
             </div>
         </div>
     );

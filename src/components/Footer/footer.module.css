@@ -23,7 +23,7 @@
 }
 
 .title {
-    @apply text-footer-color text-[18px] mb-[24px]
+    @apply text-footer-color text-[18px] mb-[24px] font-ProximSemiBold
 }
 
 .socials {
@@ -40,7 +40,7 @@
 }
 
 .link_a {
-    @apply mb-[12px] cursor-pointer block hover:text-link-gradient
+    @apply mb-[12px] cursor-pointer text-[18px] block hover:text-link-gradient font-ProximSemiBold
 }
 
 .copy {
@@ -48,6 +48,6 @@
 }
 
 .copyright {
-    @apply text-footer-color block
+    @apply text-footer-color block font-ProximSemiBold text-[16px]
 }
 

@@ -48,6 +48,7 @@ export default {
         'ProximBold': ['ProximBold'],
         'ProximExtraBold': ['ProximExtraBold'],
         'ProximSemiBold': ['ProximSemiBold'],
+        'ProximRegular': ['ProximRegular']
       }
     }
   },
@@ -73,6 +74,14 @@ export default {
         '@font-face': {
           fontFamily: 'ProximSemiBold',
           src: 'url(/fonts/proxima-nova/ProximaNova-Semibold.woff) format("woff")'
+        }
+      })
+    }),
+    plugin(function ({addBase}) {
+      addBase({
+        '@font-face': {
+          fontFamily: 'ProximRegular',
+          src: 'url(/fonts/proxima-nova/ProximaNova-Regular.woff) format("woff")'
         }
       })
     })

@@ -34,27 +34,21 @@
     @apply flex-shrink-0  relative after:bg-[url('../../../assets/before_after/panels/color-blue/elements.svg')] after:block after:w-[130px] after:h-[100px] after:right-[-90px] after:top-[-40px] after:absolute
 }
 
-.slide__info > h1 {
+.slide__info > h3 {
     @apply mb-3 text-base tracking-wider text-gray-400 uppercase font-ProximBold leading-[1.3em]
 }
 
-.slide__info > h2 {
+.slide__info > h1 {
     @apply mb-7 text-[64px] text-white font-ProximExtraBold -tracking-tighter leading-[1.15em]
 }
 
-.slide__info > h3 {
+.slide__info > h2 {
     @apply text-2xl text-gray-400 font-ProximSemiBold leading-[1.3em] mb-[40px]
 }
 
 
 .button {
-    padding: 15px 0;
-    width: 100%;
-    font-size: 23px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(90deg, #0C83FF 20.83%, #9008FE 100%);
-    border-radius: 6px;
+    @apply p-4 w-full text-3xl font-ProximSemiBold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg
 }
 
 .button:hover {
@@ -78,5 +72,125 @@
 }
 
 .online_amount__amount {
-    @apply text-white text-[18px] flex items-center before:w-[8px] before:h-[8px] before:rounded-[50px] before:bg-online-amount before:block before:mr-[10px]
+    @apply text-white font-ProximRegular text-[18px] flex items-center before:w-[8px] before:h-[8px] before:rounded-[50px] before:bg-online-amount before:block before:mr-[10px]
+}
+
+
+
+@media (max-width: 1700px ) {
+
+    .sliderBlock {
+        @apply pt-[150px] before:h-[800px]
+    }
+
+    .wrapper {
+        @apply mx-auto w-[1200px]
+    }
+
+    .slide_img {
+        @apply ml-[2px] mr-[-140px] w-[720px]
+    }
+
+    .online_amount {
+        @apply left-[560px]
+    }
+
+    .button {
+        padding: 15px 0;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1400px ) {
+
+    .sliderBlock {
+        @apply  before:h-[600px]
+    }
+
+    .slide_img {
+        @apply mr-[-10px] w-[520px]
+    }
+
+    .wrapper {
+        @apply mx-auto w-[1060px]
+    }
+
+    .slide__info > h3 {
+        @apply mb-3 text-[12px] tracking-wider text-gray-400 uppercase font-ProximBold leading-[1.3em]
+    }
+
+    .slide__info > h1 {
+        @apply mb-7 text-[44px] text-white font-ProximExtraBold -tracking-tighter leading-[1.15em]
+    }
+
+    .slide__info > h2 {
+        @apply text-[20px] text-gray-400 font-ProximSemiBold leading-[1.3em] mb-[40px]
+    }
+
+    .button {
+        @apply text-[24px] py-[7px]
+    }
+
+    .online_amount {
+        @apply left-[460px] py-[15px] px-[20px]
+    }
+
+}
+
+@media (max-width: 768px ) {
+
+    .wrapper {
+        @apply mx-auto w-[660px]
+    }
+
+    .slide__info {
+        @apply after:w-[140px] after:h-[100px] after:right-[-40px] after:top-[-60px]
+    }
+
+    .slide_img {
+        @apply mr-[-40px] w-[340px]
+    }
+
+    .slide__info > h3 {
+        @apply mb-3 text-[12px] tracking-wider text-gray-400 uppercase font-ProximBold leading-[1.3em]
+    }
+
+    .slide__info > h1 {
+        @apply mb-7 text-[35px] text-white font-ProximExtraBold -tracking-tighter leading-[1.15em]
+    }
+
+    .slide__info > h2 {
+        @apply text-[15px] text-gray-400 font-ProximSemiBold leading-[1.3em] mb-[40px]
+    }
+
+    .button {
+        @apply text-[18px] py-[4px]
+    }
+
+    .online_amount {
+        @apply top-[400px] left-[260px] py-[20px] pb-10 px-[10px] bottom-[60px] bg-gray-800
+    }
+
+
+}
+
+
+
+@media (max-width: 368px ) {
+    .wrapper {
+        @apply mx-auto w-[340px]
+    }
+
+
+    .sliderBlock {
+        @apply  before:h-[400px]
+    }
+
+    .slide_img {
+        @apply hidden
+    }
+    .online_amount {
+        @apply top-[350px] left-[80px] py-[20px] pb-10 px-[10px] bottom-[60px] bg-gray-800
+    }
 }
