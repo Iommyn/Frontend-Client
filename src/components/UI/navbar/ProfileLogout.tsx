@@ -3,7 +3,7 @@ import s from "../../Navbar/Navbar.module.css";
 import dropdownIcon from "../../../assets/icons/dropdownIcon.svg";
 import {Link, useNavigate} from "react-router-dom";
 import {logout} from "../../../store/user/userSlice";
-import {removeTokenFromLocalStorage} from "../../../helpers/localstorage.helper";
+import {removeTokenFromLocalStorage} from "../../../helpers/localstorage";
 import {useAppDispatch} from "../../../store/hooks";
 import { toast } from 'react-toastify';
 

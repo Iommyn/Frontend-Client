@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import {AuthService} from "../service/AuthService";
+import {AuthService} from "../../../service/AuthService";
 import {toast} from "react-toastify";
-import {useNavigate} from "react-router-dom";
-import Logo from '../assets/icons/Logout_logo.png'
-import MyInput from "../components/UI/input/MyInput";
-import MyButton from "../components/UI/button/MyButton";
-import {IUserData} from "../types/types";
+import {Link, useNavigate} from "react-router-dom";
+import Logo from '../../../assets/icons/Logout_logo.png'
+import MyInput from "../../../components/UI/input/MyInput";
+import MyButton from "../../../components/UI/button/MyButton";
 
 const RegisterConfirm = () => {
     const navigate = useNavigate()
@@ -27,7 +26,9 @@ const RegisterConfirm = () => {
     return (
         <section className='h-[100px] mb-[380px] pt-56'>
             <div className='mb-[70px] flex justify-center'>
-                <img src={Logo} alt="Логотип"/>
+                <Link to="/">
+                    <img src={Logo} alt="Логотип"/>
+                </Link>
             </div>
             <h1 className='text-footer-color text-center text-[25px] font-bold mt-[12px] mb-[30px]'>
                 Подтвердите регистрацию!

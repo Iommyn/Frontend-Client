@@ -2,12 +2,11 @@ import {BrowserRouter} from 'react-router-dom';
 import AppRouter from './components/AppRouter';
 import './App.css';
 import React, {useEffect} from 'react';
-import {login} from "./store/user/userSlice";
 import {useAppDispatch} from "./store/hooks";
-import {getTokenFromLocalStorage} from "./helpers/localstorage.helper";
-import {IUser} from "./types/types";
+import {getTokenFromLocalStorage} from "./helpers/localstorage";
 import {toast} from "react-toastify";
-
+import {IUser} from "./types/types";
+import {login} from "./store/user/userSlice";
 
 export default function App() {
 
@@ -25,7 +24,7 @@ export default function App() {
                 localStorage.removeItem('isAuth');
                 toast.info('Срок действия токена истек, пожалуйста, авторизуйтесь снова');
             } else {
-                const user: IUser = {token};
+                const user: IUser = { token };
                 dispatch(login(user));
                 localStorage.setItem('isAuth', JSON.stringify(true));
             }

@@ -1,10 +1,10 @@
 import React, {FC, useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
-import Logo from "../assets/icons/Logout_logo.png";
-import MyInput from "../components/UI/input/MyInput";
-import MyButton from "../components/UI/button/MyButton";
+import Logo from '../../../assets/icons/Logout_logo.png'
+import MyInput from "../../../components/UI/input/MyInput";
+import MyButton from "../../../components/UI/button/MyButton";
 import {toast} from "react-toastify";
-import {AuthService} from "../service/AuthService";
+import {AuthService} from "../../../service/AuthService";
 
 const Register: FC = () => {
 
@@ -21,7 +21,7 @@ const Register: FC = () => {
             const data = await AuthService.Register({username, email, password});
             if (data) {
                 toast.warning('Потвердите код, который находится на вашей почте!');
-                navigate('/Confirm');
+                navigate('/confirm');
             }
         } catch (error) {
             toast.error(error.response.data.message);

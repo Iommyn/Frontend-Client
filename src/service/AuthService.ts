@@ -1,5 +1,6 @@
-import {IResponseUserData, IUserData} from "../types/types";
+import {IResponseUser, IResponseUserData, IUserData, IUserDataRecovery} from "../types/types";
 import {instance} from "../api/axios.api";
+import {toast} from "react-toastify";
 
 export const AuthService = {
 
@@ -24,6 +25,10 @@ export const AuthService = {
         return data;
     },
 
+    async Recovered(userData: IUserDataRecovery): Promise<any | undefined> {
+        const { data } = await instance.post<IUserData>('/site/recovery', userData);
+        return data;
+    },
 
 
     async refreshTokenRequest(userData: { refreshToken: string }): Promise<any | undefined> {
@@ -35,7 +40,6 @@ export const AuthService = {
             return undefined;
         }
     },
-
 
 
 }

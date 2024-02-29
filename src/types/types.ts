@@ -2,13 +2,19 @@ export interface IUser {
     email?: string
     token: string
     refreshToken?: string
-    tokenExpiration?: string
 }
 
 export interface IUserData {
     email?: string
     password: string
     username: string
+}
+
+export interface IUserDataRecovery {
+    code?: string
+    password?: string
+    username?: string
+    email?: string
 }
 
 export interface IResponseUser {

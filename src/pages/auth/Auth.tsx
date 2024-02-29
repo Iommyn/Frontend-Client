@@ -1,29 +1,38 @@
-import MyInput from "../components/UI/input/MyInput";
-import MyButton from "../components/UI/button/MyButton.js";
-import Logo from "../assets/icons/Logout_logo.png"
+import MyInput from "../../components/UI/input/MyInput";
+import MyButton from "../../components/UI/button/MyButton";
+import Logo from '../../assets/icons/Logout_logo.png'
 import {Link, useNavigate} from "react-router-dom";
 import {FC, useState} from "react";
 import React from "react";
-import {AuthService} from "../service/AuthService";
+import {AuthService} from "../../service/AuthService";
 import {toast} from "react-toastify";
-import {setTokenToLocalStorage} from "../helpers/localstorage.helper";
-import {useAppDispatch} from "../store/hooks";
-import {login} from "../store/user/userSlice";
-
+import {setTokenToLocalStorage} from "../../helpers/localstorage";
+import {useAppDispatch} from "../../store/hooks";
+import {login} from "../../store/user/userSlice";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 const Auth: FC = () => {
 
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+    const [recaptchaValue, setRecaptchaValue] = useState<string>('');
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate();
 
 
+
     const loginHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         try {
             e.preventDefault();
+
+            // Проверяем, что reCAPTCHA пройдена
+            if (!recaptchaValue) {
+                toast.error('Пожалуйста, пройдите проверку reCAPTCHA');
+                return;
+            }
+
             const data = await AuthService.login({username, password});
             if (data) {
                 setTokenToLocalStorage('token', data.token);
@@ -37,7 +46,6 @@ const Auth: FC = () => {
             toast.error(error.response.data.message);
         }
     }
-
 
     return (
         <section className='h-[100px] mb-[380px] pt-28'>
@@ -55,17 +63,29 @@ const Auth: FC = () => {
                     <MyInput
                         type="text"
                         placeholder="Maskott"
-                        onChange={(e) => setUsername(e.target.value)} />
+                        onChange={(e) => setUsername(e.target.value)}/>
 
                     <h1 className='text-white'>Введите пароль</h1>
                     <MyInput
                         type="password"
                         placeholder="••••••••••••••••"
-                        onChange={(e) => setPassword(e.target.value)} />
+                        onChange={(e) => setPassword(e.target.value)}/>
+
+
+                        <h1 className='text-white mb-3'>Пройдите проверку</h1>
+                        <ReCAPTCHA
+                            className='flex justify-center'
+                            sitekey="6Leq1IIpAAAAAHCT9atezPoZ1dCcQOFU2Mm9ZUBt"
+                            onChange={(value) => setRecaptchaValue(value)}
+                        />
+
 
                     <MyButton>Войти</MyButton>
 
-                    <h1 className="text-footer-color text-center">Забыли создать аккаунт? <Link className='text-download-link hover:text-download-link' to='/signup'>Зарегистрироваться</Link></h1>
+                    <h1 className="text-footer-color mb-4 text-center">Забыли создать аккаунт? <Link
+                        className='text-download-link hover:text-download-link' to='/signup'>Зарегистрироваться</Link>
+                    </h1>
+                    <h1 className='text-center'><Link className='text-white' to='/recovery'>Забыли пароль?</Link> </h1>
                 </div>
             </form>
         </section>
