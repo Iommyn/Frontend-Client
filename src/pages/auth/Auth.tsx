@@ -28,7 +28,10 @@ const Auth: FC = () => {
             e.preventDefault();
 
             // Проверяем, что reCAPTCHA пройдена
-
+            if (!recaptchaValue) {
+                toast.error('Пожалуйста, пройдите проверку reCAPTCHA');
+                return;
+            }
 
             const data = await AuthService.login({username, password});
             if (data) {

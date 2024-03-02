@@ -23,7 +23,10 @@ const Register: FC = () => {
             e.preventDefault();
 
             // Проверяем, что reCAPTCHA пройдена
-
+            if (!recaptchaValue) {
+                toast.error('Пожалуйста, пройдите проверку reCAPTCHA');
+                return;
+            }
             const data = await AuthService.Register({username, email, password});
             if (data) {
                 toast.warning('Потвердите код, который находится на вашей почте!');
