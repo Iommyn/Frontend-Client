@@ -178,10 +178,10 @@
 
 
 @media (max-width: 368px ) {
+
     .wrapper {
         @apply mx-auto w-[340px]
     }
-
 
     .sliderBlock {
         @apply  before:h-[400px]
@@ -190,7 +190,9 @@
     .slide_img {
         @apply hidden
     }
+
     .online_amount {
         @apply top-[350px] left-[80px] py-[20px] pb-10 px-[10px] bottom-[60px] bg-gray-800
     }
+    
 }
