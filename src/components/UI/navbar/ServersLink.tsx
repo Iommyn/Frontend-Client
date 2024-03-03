@@ -23,7 +23,7 @@ export default function ServersLink() {
                     <div className={s.ItemTitle}>
                         Сервера 1.7.10
                     </div>
-                    <div className='top-0 mt-[17px] mb-[8px] block h-[3px] left-0 right-0 bg-gray-600'></div>
+                    <div className='top-0 mt-[12px] mb-[2px] block h-[3px] left-0 right-0 bg-gray-600'></div>
                     <div className='inline-block'>
                         <div className='flex flex-col'>
                             {servers.map(({name, link}, index) => (

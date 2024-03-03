@@ -71,7 +71,7 @@
 */
 
 .Button {
-    @apply inline-flex cursor-pointer delay-150
+    @apply inline-flex cursor-pointer delay-150 hover:text-white
 }
 
 .ButtonProfile {
@@ -207,6 +207,22 @@
         @apply flex flex-col ml-20 mt-6
     }
 
+    .Button {
+        @apply inline-flex cursor-pointer delay-150 hover:text-white ml-4
+    }
+
+
+    .ItemTitle {
+        @apply text-item-title text-[15px] font-ProximSemiBold
+    }
+
+    .Item {
+        @apply text-[15px] text-center
+    }
+
+    .dropdownContent {
+        @apply  border-t-2 border-x-2 border-gray-600 my-[2px] mx-[-80px] absolute rounded-[6px] cursor-default right-0 z-10 pt-4 text-center max-w-[200px] h-auto max-h-[200px] overflow-y-auto bg-dropdowns-bg text-[12px]
+    }
 
     .nav_list {
         @apply mx-2 mt-4 flex

@@ -34,7 +34,7 @@ export default function FooterApp () {
                                 className={s.content_logo}
                                 onClick={scrollToTop}
                             >
-                                <img src={Logo} className='h-16'/>
+                                <img src={Logo} className={s.logo}/>
                             </a>
 
                             <div className={s.links_block}>

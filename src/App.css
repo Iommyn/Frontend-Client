@@ -13,7 +13,6 @@
 
 *::-webkit-scrollbar {
   display: none; /* Для WebKit (Chrome, Safari, Opera) */
-
 }
 
 * {
@@ -33,4 +32,5 @@ a:hover {
 
 body {
   background: linear-gradient(124.23deg, #3E4151 -21.92%, #1D1E24 9.03%, #04080F 74.99%), #FFFFFF;
+  overflow-x: hidden;
 }

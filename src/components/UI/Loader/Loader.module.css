@@ -31,7 +31,7 @@
 }
 
 .title {
-    @apply text-center font-ProximBold text-webview-link mt-12 text-[40px]
+    @apply text-center font-ProximBold text-webview-link mt-8 text-[40px]
 }
 
 .information {
@@ -45,10 +45,10 @@
 
 @media (max-width: 480px ) {
     .title {
-        @apply text-[20px]
+        @apply text-[25px]
     }
     .information {
-        @apply text-[15px] mb-10
+        @apply text-[20px] mb-5
     }
 
     .spinner {

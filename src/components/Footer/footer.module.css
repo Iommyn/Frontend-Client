@@ -51,3 +51,54 @@
     @apply text-footer-color block font-ProximSemiBold text-[16px]
 }
 
+.logo {
+    @apply h-16
+}
+
+
+
+@media (max-width: 468px) {
+
+    .footer {
+        @apply text-center items-center
+    }
+    .content_logo {
+        @apply w-[50px] mb-4
+    }
+
+    .socials {
+        @apply mb-4
+    }
+
+    .social_ds {
+        @apply ml-[50px]
+    }
+
+    .wrapper {
+        @apply py-[5px] after:top-[700px]
+    }
+
+    .title {
+        @apply text-[16px] mb-[15px] mt-[20px] font-ProximSemiBold
+    }
+
+    .link_a {
+        @apply text-[15px]
+    }
+
+    .container {
+        @apply w-[400px] my-0
+    }
+
+
+    .content__links {
+        @apply flex flex-col items-center
+    }
+
+    .copyright {
+        @apply text-footer-color mr-[30px] block font-ProximSemiBold text-[14px]
+    }
+
+}
+
+
