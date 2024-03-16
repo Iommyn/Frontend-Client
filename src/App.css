@@ -1,9 +1,6 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 * {
   scrollbar-width: none; /* Для Firefox */
@@ -20,17 +17,20 @@
 }
 
 a {
-  @apply text-white no-underline
+  @apply text-white no-underline;
 }
 
 a:hover {
-  @apply text-gray-500 no-underline
+  @apply text-gray-500 no-underline;
 }
 
-
-
-
 body {
-  background: linear-gradient(124.23deg, #3E4151 -21.92%, #1D1E24 9.03%, #04080F 74.99%), #FFFFFF;
+  background: linear-gradient(
+      124.23deg,
+      #3e4151 -21.92%,
+      #1d1e24 9.03%,
+      #04080f 74.99%
+    ),
+    #ffffff;
   overflow-x: hidden;
 }

@@ -1,62 +1,57 @@
-
 .section {
-    @apply pt-28 min-h-[120vh]
+  @apply min-h-[120vh] pt-28;
 }
 
 .sectionConfirm {
-    @apply pt-28 min-h-[110vh]
+  @apply min-h-[110vh] pt-28;
 }
 
 .h1 {
-    @apply text-white text-center text-[42px] font-ProximExtraBold
+  @apply text-center font-ProximExtraBold text-[42px] text-white;
 }
 
 .h1_Confirm {
-    @apply text-white text-center mb-8 text-[32px] font-ProximExtraBold
+  @apply mb-8 text-center font-ProximExtraBold text-[32px] text-white;
 }
 
 .h1_input {
-    @apply text-white text-[16px] font-ProximRegular
+  @apply font-ProximRegular text-[16px] text-white;
 }
 
 .h1_captcha {
-    @apply text-white mb-4 mt-2
+  @apply mb-4 mt-2 text-white;
 }
 
 .captcha {
-    @apply mx-auto mb-4
+  @apply mx-auto mb-4;
 }
 
 .registerAkk {
-    @apply text-footer-color mb-6 text-center
+  @apply mb-6 text-center text-footer-color;
 }
 
+@media (max-width: 480px) {
+  .section {
+    @apply min-h-[120vh] pt-10;
+  }
 
-@media (max-width: 480px ) {
+  .sectionConfirm {
+    @apply min-h-[110vh] pt-28;
+  }
 
-    .section {
-        @apply pt-10 min-h-[120vh]
-    }
+  .h1 {
+    @apply text-[22px];
+  }
 
-    .sectionConfirm {
-        @apply pt-28 min-h-[110vh]
-    }
+  .h1_input {
+    @apply ml-[10px];
+  }
 
-    .h1 {
-        @apply text-[22px]
-    }
+  .h1_captcha {
+    @apply ml-[10px];
+  }
 
-    .h1_input {
-        @apply ml-[10px]
-    }
-
-    .h1_captcha {
-        @apply ml-[10px]
-    }
-
-    .registerAkk {
-        @apply flex flex-col
-    }
+  .registerAkk {
+    @apply flex flex-col;
+  }
 }
-
-

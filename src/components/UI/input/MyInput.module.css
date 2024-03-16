@@ -1,21 +1,20 @@
 .myInput {
-    @apply  h-[47px] pl-[13px] w-[429px] my-[15px] bg-transparent text-white rounded-[6px] border-[1px] border-input-border
-
+  @apply my-[15px] h-[47px] w-[429px] rounded-[6px] border-[1px] border-input-border bg-transparent pl-[13px] text-white;
 }
 
 .myInput:focus {
-    border-color: #8fa2ff;
-    box-shadow: 0 0 10px #8fa2ff;
+  border-color: #8fa2ff;
+  box-shadow: 0 0 10px #8fa2ff;
 }
 
 @media (max-width: 320px) {
-    .myInput {
-        @apply  h-[47px] pl-[13px] mx-auto w-[290px] my-[15px] bg-transparent text-white rounded-[6px] border-[1px] border-input-border
-    }
+  .myInput {
+    @apply mx-auto my-[15px] h-[47px] w-[290px] rounded-[6px] border-[1px] border-input-border bg-transparent pl-[13px] text-white;
+  }
 }
 
 @media (max-width: 480px) {
-    .myInput {
-        @apply  h-[47px] pl-[13px] mx-auto w-[290px] my-[15px] bg-transparent text-white rounded-[6px] border-[1px] border-input-border
-    }
+  .myInput {
+    @apply mx-auto my-[15px] h-[47px] w-[290px] rounded-[6px] border-[1px] border-input-border bg-transparent pl-[13px] text-white;
+  }
 }

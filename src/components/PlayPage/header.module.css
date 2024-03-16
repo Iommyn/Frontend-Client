@@ -1,67 +1,63 @@
 .page {
-    @apply py-[122px] px-0 min-h-[80vh]
+  @apply min-h-[80vh] px-0 py-[122px];
 }
 
 .container {
-    @apply w-[1160px] my-0 mx-auto
+  @apply mx-auto my-0 w-[1160px];
 }
 
 .page_title {
-    @apply text-[64px] font-ProximExtraBold text-white text-center leading-[1.15em] mb-[120px] relative before:bg-[url('../../assets/before_after/panels/color-blue/line_three.svg')] before:w-[89px] before:h-[103px] before:block before:my-0 before:mx-auto before:mb-[12px]
+  @apply relative mb-[120px] text-center font-ProximExtraBold text-[64px] leading-[1.15em] text-white before:mx-auto before:my-0 before:mb-[12px] before:block before:h-[103px] before:w-[89px] before:bg-[url('../../assets/before_after/panels/color-blue/line_three.svg')];
 }
 
 .download_section {
-    @apply flex justify-between
+  @apply flex justify-between;
 }
 
 .download_step__purple {
-    @apply w-[28%] text-center relative after:bg-[url('../../assets/page_play/line_download.svg')] after:bg-no-repeat after:w-[198px] after:h-[22px] after:bg-center after:bg-contain after:block after:absolute after:right-[-148px] after:top-[32px]
+  @apply relative w-[28%] text-center after:absolute after:right-[-148px] after:top-[32px] after:block after:h-[22px] after:w-[198px] after:bg-[url('../../assets/page_play/line_download.svg')] after:bg-contain after:bg-center after:bg-no-repeat;
 }
 
-
 .download_step__icon {
- @apply  w-[54px] h-[54px] rounded-[8px] p-[1px] flex items-center justify-center my-0 mx-auto mb-[52px]
+  @apply mx-auto my-0 mb-[52px] flex h-[54px] w-[54px] items-center justify-center rounded-[8px] p-[1px];
 }
 
 .download_step__number {
-    @apply text-footer-color font-ProximSemiBold text-[18px] leading-[1.15em] inline-block mb-[24px]
+  @apply mb-[24px] inline-block font-ProximSemiBold text-[18px] leading-[1.15em] text-footer-color;
 }
 
 .download_step__p {
-    @apply text-white font-ProximRegular text-[28px] leading-[1.15em]
+  @apply font-ProximRegular text-[28px] leading-[1.15em] text-white;
 }
 
-
 .download_step__blue {
-    @apply w-[28%] text-center relative after:bg-[url('../../assets/page_play/line_download.svg')] after:bg-no-repeat after:w-[198px] after:h-[12px] after:bg-center after:bg-contain after:block after:absolute after:right-[-148px] after:top-[32px]
+  @apply relative w-[28%] text-center after:absolute after:right-[-148px] after:top-[32px] after:block after:h-[12px] after:w-[198px] after:bg-[url('../../assets/page_play/line_download.svg')] after:bg-contain after:bg-center after:bg-no-repeat;
 }
 
 .download_links {
-    @apply flex justify-center mt-[8px]
+  @apply mt-[8px] flex justify-center;
 }
 
 .download_link {
-    @apply flex relative  leading-[1.25em] text-[20px] uppercase  text-download-link
+  @apply relative flex  text-[20px] uppercase leading-[1.25em]  text-download-link;
 }
 
-
-
 .download_step__green {
-    @apply w-[28%] text-center relative
+  @apply relative w-[28%] text-center;
 }
 
 .download_info {
-    @apply mt-[110px] mx-auto my-0 w-fit text-[19px] font-ProximSemiBold bg-download-help py-[15px] px-[35px] rounded-[8px]
+  @apply mx-auto my-0 mt-[110px] w-fit rounded-[8px] bg-download-help px-[35px] py-[15px] font-ProximSemiBold text-[19px];
 }
 
 .download_info__span {
-    @apply text-footer-color
+  @apply text-footer-color;
 }
 
 .download_info__link {
-    @apply text-webview-link ml-1
+  @apply ml-1 text-webview-link;
 }
 
 .download_link__webview {
-    @apply flex justify-center relative leading-[1.60em] text-download-link
+  @apply relative flex justify-center leading-[1.60em] text-download-link;
 }

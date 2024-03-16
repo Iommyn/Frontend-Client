@@ -1,0 +1,51 @@
+.page {
+    @apply px-0 py-[112px];
+}
+
+.container {
+    @apply mx-auto my-0 w-[1160px];
+}
+
+.page_title {
+    @apply relative mb-[80px] font-ProximExtraBold text-center text-[50px] leading-[1.15em] text-white before:mx-[525px] before:my-0 before:mb-[12px] before:block before:h-[103px] before:w-[89px] before:bg-[url('../../assets/before_after/panels/color-blue/line_three.svg')];
+}
+
+
+
+.dieOne {
+    @apply bg-dies-help   ml-12 w-[320px] h-[657px] rounded-[8px] border border-gray-700;
+}
+
+.dieTwo {
+    @apply bg-dies-help  ml-12 w-[320px] h-[657px] rounded-[8px] border-[3px] border-l-pink-600 border-r-pink-500 border-t-fuchsia-600 border-b-fuchsia-700
+}
+
+.dieThree {
+    @apply bg-dies-help ml-12 w-[320px] h-[657px] rounded-[8px] border border-gray-700
+}
+
+.h2 {
+    @apply mt-[100px] mx-[42px] text-[18px] font-bold
+}
+
+.h3 {
+    @apply  mx-[42px] mt-[12px] text-footer-color text-[16px] font-ProximSemiBold
+}
+
+.price {
+    @apply flex text-[38px]  font-bold text-center mx-[42px] mt-[26px]
+}
+
+.month {
+    @apply text-[17px] text-footer-color font-ProximSemiBold pl-3 pt-5
+}
+
+
+.button {
+    @apply absolute w-[236px] mt-[16px] text-white mx-[42px] rounded-lg bg-footer-gradient p-2 font-ProximSemiBold text-[16px] transition duration-300 ease-in-out shadow-md
+}
+
+.button:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 14px #0c83ff;
+}

@@ -6,64 +6,54 @@
 **/
 
 .pink_circle {
-    @apply absolute top-28 right-0 left-0 h-[1000px] bg-[url('../../assets/before_after/glows/purple.svg')] bg-no-repeat bg-contain
+  @apply absolute left-0 right-0 top-28 h-[1000px] bg-[url('../../assets/before_after/glows/purple.svg')] bg-contain bg-no-repeat;
 }
 
 .Glow_Blue {
-    @apply absolute top-0 right-[-310px] left-0 h-[1000px] bg-[url('../../assets/before_after/glows/blue.svg')] bg-no-repeat bg-contain bg-right
+  @apply absolute left-0 right-[-310px] top-0 h-[1000px] bg-[url('../../assets/before_after/glows/blue.svg')] bg-contain bg-right bg-no-repeat;
 }
-
-
 
 /** Wrapper for navigation **/
 
 .nav {
-    @apply relative
+  @apply relative;
 }
 
 .wrapper {
-    @apply pt-[30px] my-0 mx-auto w-[1160px]
+  @apply mx-auto my-0 w-[1160px] pt-[30px];
 }
 
 .nav_list {
-    @apply flex justify-between items-center
+  @apply flex items-center justify-between;
 }
 
 .nav_list2 {
-    @apply flex justify-between items-center
+  @apply flex items-center justify-between;
 }
-
-
-
 
 /** Navigation. Styles for links **/
 
 .NavbarLinks {
-    @apply relative items-center space-x-[45px] text-lg mr-28 font-ProximRegular
+  @apply relative mr-[200px] items-center space-x-[60px] font-ProximRegular text-lg;
 }
 
 .NavbarLinks > a {
-    @apply text-lg hover:transition delay-150 duration-100 ease-in-out
+  @apply text-lg duration-100 ease-in-out hover:transition;
 }
-
-
 
 /**  Authorization and registration buttons for the Navbar **/
 
 .NavAuthReg {
-    @apply flex items-center relative font-ProximRegular
+  @apply relative flex items-center font-ProximRegular;
 }
 
 .auth {
-    @apply text-[18px] mr-[30px] ml-12 hover:transition duration-100 ease-in-out
+  @apply ml-12 mr-[30px] text-[18px] duration-100 ease-in-out hover:transition;
 }
 
 .reg {
-    @apply ml-[10px] text-[18px] py-[15px] px-[35px] bg-gray-700 rounded-md hover:bg-gray-800 hover:text-white duration-100 ease-in-out
+  @apply ml-[10px] rounded-md bg-gray-700 px-[35px] py-[15px] text-[18px] duration-100 ease-in-out hover:bg-gray-800 hover:text-white;
 }
-
-
-
 
 /*
 * Menu for expanding the link ("Серверы"),
@@ -71,166 +61,287 @@
 */
 
 .Button {
-    @apply inline-flex cursor-pointer delay-150 hover:text-white
+  @apply inline-flex cursor-pointer hover:text-gray-500;
 }
 
 .ButtonProfile {
-    @apply inline-flex cursor-pointer delay-150 mr-20 text-footer-color font-ProximSemiBold text-[18px]
+  @apply mr-20 inline-flex cursor-pointer font-ProximSemiBold text-[18px] text-white;
 }
 
 .dropdown {
-    @apply relative inline-block
+  @apply relative inline-block;
 }
 
 .dropdownContent {
-    @apply pb-5 border-t-4 border-x-2 border-gray-600 my-2 mx-[-100px] absolute rounded-[6px] cursor-default right-0 z-10 pt-6 px-10 w-auto h-auto max-h-[300px] overflow-y-auto bg-dropdowns-bg text-[16px]
+  @apply absolute right-0 z-10 mx-[-60px] my-2 h-auto max-h-[230px] w-auto cursor-default overflow-y-auto rounded-[6px] border-x-2 border-t-4 border-gray-600 bg-dropdowns-bg px-8 pb-5 pt-6 text-[16px];
+}
+
+.dropdownContentProfile {
+  @apply absolute right-0 z-10 mx-[-20px] my-2 h-auto max-h-[230px] w-auto cursor-default overflow-y-auto rounded-[6px] border-x-2 border-t-4 border-gray-600 bg-dropdowns-bg px-7 pb-5 pt-6 text-[16px];
 }
 
 .ItemTitleLogout {
-    @apply text-item-title text-[20px] hover:text-item-title-hover font-ProximBold
+  @apply font-ProximSemiBold text-[19px] text-gray-400 hover:text-gray-600;
 }
 
 .ItemTitle {
-    @apply text-item-title text-[20px] font-ProximSemiBold
+  @apply font-ProximSemiBold text-[20px] text-item-title;
 }
 
 .Item {
-    @apply hover:text-footer-color scale-110 text-[17px] py-1 pl-2 inline-block font-ProximRegular
+  @apply inline-block scale-110 py-1 pl-2 font-ProximRegular text-[16px] hover:text-footer-color;
 }
-
-
-
 
 .dropdownContents {
-    @apply pb-2 border-t-4 border-x-2 border-gray-600 my-2 mx-[-10px] absolute rounded-[6px] cursor-default right-0 z-10 pt-6 px-8 w-[190px] h-[178px] bg-dropdowns-bg text-[16px]
+  @apply absolute right-0 z-10 mx-[-10px] my-2 h-[178px] w-[190px] cursor-default rounded-[6px] border-x-2 border-t-4 border-gray-600 bg-dropdowns-bg px-8 pb-2 pt-6 text-[16px];
 }
 
-
-
 .nav_list3 {
-    @apply hidden
+  @apply hidden;
 }
 
 @media (max-width: 1200px) {
+  .burger_menu {
+    @apply relative flex cursor-pointer items-center justify-center rounded-lg border-none bg-gray-800 p-3;
+  }
 
-    .burger_menu {
-        @apply relative bg-gray-800 rounded-lg border-none cursor-pointer flex justify-center items-center p-3
-    }
+  .burger_icon {
+    @apply flex h-[20px] w-[30px] flex-col justify-between;
+  }
 
-    .burger_icon {
-        @apply w-[30px] h-[20px] flex flex-col justify-between
-    }
+  .burger_icon span {
+    @apply mb-[6px] block h-[4px] w-full rounded-[34px] bg-gray-300;
+  }
 
-    .burger_icon span {
-        @apply block w-full h-[4px] rounded-[34px] bg-gray-300 mb-[6px]
-    }
+  .logo {
+    @apply mt-3 h-12;
+  }
 
-    .logo {
-        @apply h-12 mt-3
-    }
+  .burger_menu_items {
+    @apply fixed bottom-0 left-0 right-0 top-0 z-50 flex flex-col items-center justify-center rounded-md bg-gray-950 bg-opacity-50 p-4 shadow-md backdrop-blur-lg backdrop-filter;
+  }
 
-    .burger_menu_items {
-        @apply fixed top-0 left-0 bottom-0 right-0 z-50 bg-gray-950 bg-opacity-50 backdrop-filter backdrop-blur-lg flex flex-col items-center justify-center p-4 rounded-md shadow-md
-    }
+  .burger_menu_items a {
+    @apply cursor-pointer px-[16px] py-[8px];
+  }
 
-    .burger_menu_items a {
-        @apply cursor-pointer py-[8px] px-[16px]
-    }
+  .close_button {
+    @apply absolute right-10 top-10 z-10 cursor-pointer border-none bg-transparent px-1 text-2xl text-white after:content-['X'];
+  }
 
+  .NavbarLinks {
+    @apply mt-6 flex flex-col space-x-[0px];
+  }
 
-    .close_button {
-        @apply absolute top-10 right-10 cursor-pointer text-white text-2xl px-1 border-none bg-transparent z-10 after:content-['X']
-    }
+  .dropdownContent {
+    @apply left-12 w-[220px];
+  }
 
+  .auth {
+    @apply ml-12 mr-[30px] text-[18px] duration-100 ease-in-out hover:transition;
+  }
 
-    .NavbarLinks {
-        @apply flex flex-col space-x-[0px] mt-6
-    }
+  .reg {
+    @apply ml-[10px] rounded-md bg-gray-700 px-[35px] py-[15px] text-[18px] duration-100 ease-in-out hover:bg-gray-800 hover:text-white;
+  }
 
-    .dropdownContent {
-        @apply left-12 w-[220px]
-    }
+  .nav_list {
+    @apply mx-8 mt-4 flex;
+  }
 
+  .nav_list2 {
+    @apply hidden;
+  }
 
-    .auth {
-        @apply text-[18px] mr-[30px] ml-12 hover:transition duration-100 ease-in-out
-    }
+  .nav_list3 {
+    @apply mx-8 mt-4 flex;
+  }
 
-    .reg {
-        @apply ml-[10px] text-[18px] py-[15px] px-[35px] bg-gray-700 rounded-md hover:bg-gray-800 hover:text-white duration-100 ease-in-out
-    }
-
-
-    .nav_list {
-        @apply mx-8 mt-4 flex
-    }
-
-
-    .nav_list2 {
-        @apply hidden
-    }
-
-    .nav_list3 {
-        @apply mx-8 mt-4 flex
-    }
-
-
-    .wrapper {
-        @apply w-full p-[2px]
-    }
-
+  .wrapper {
+    @apply w-full p-[2px];
+  }
 }
 
-
-
 @media (max-width: 768px) {
+  .burger_menu {
+    @apply relative flex cursor-pointer items-center justify-center rounded-lg border-none bg-gray-800 p-3;
+  }
 
+  .burger_icon {
+    @apply flex h-[20px] w-[30px] flex-col justify-between;
+  }
 
-    .auth {
-        @apply text-[15px] mr-[10px] ml-3 hover:transition duration-100 ease-in-out
-    }
+  .burger_icon span {
+    @apply mb-[6px] block h-[4px] w-full rounded-[34px] bg-gray-300;
+  }
 
-    .reg {
-        @apply ml-[10px] text-[15px] py-[10px] px-[12px] bg-gray-700 rounded-md hover:bg-gray-800 hover:text-white duration-100 ease-in-out
-    }
+  .logo {
+    @apply mt-3 h-12;
+  }
 
+  .burger_menu_items {
+    @apply fixed bottom-0 left-0 right-0 top-0 z-50 flex flex-col items-center justify-center rounded-md bg-gray-950 bg-opacity-50 p-4 shadow-md backdrop-blur-lg backdrop-filter;
+  }
 
-    .burger_menu {
-        @apply ml-4 mt-4
-    }
+  .burger_menu_items a {
+    @apply cursor-pointer px-[16px] py-[8px];
+  }
 
+  .close_button {
+    @apply absolute right-10 top-10 z-10 cursor-pointer border-none bg-transparent px-1 text-2xl text-white after:content-['X'];
+  }
+
+  .NavbarLinks {
+    @apply mt-6 flex flex-col space-x-[0px];
+  }
+
+  .dropdownContent {
+    @apply left-12 w-[220px];
+  }
+
+  .auth {
+    @apply ml-3 mr-[10px] text-[15px] duration-100 ease-in-out hover:transition;
+  }
+
+  .reg {
+    @apply ml-[10px] rounded-md bg-gray-700 px-[12px] py-[10px] text-[15px] duration-100 ease-in-out hover:bg-gray-800 hover:text-white;
+  }
+
+  .burger_menu {
+    @apply ml-4 mt-4;
+  }
+}
+
+@media (max-width: 600px) {
+  .burger_menu {
+    @apply relative flex cursor-pointer items-center justify-center rounded-lg border-none bg-gray-800 p-3;
+  }
+
+  .burger_icon {
+    @apply flex h-[20px] w-[30px] flex-col justify-between;
+  }
+
+  .burger_icon span {
+    @apply mb-[6px] block h-[4px] w-full rounded-[34px] bg-gray-300;
+  }
+
+  .burger_menu_items {
+    @apply fixed left-0 top-0 z-10 flex flex-col justify-center rounded-md bg-gray-950 bg-opacity-50 p-4 pl-20 shadow-md backdrop-blur-lg backdrop-filter;
+  }
+
+  .burger_menu_items a {
+    @apply cursor-pointer px-[16px] py-[8px];
+  }
+
+  .close_button {
+    @apply absolute right-8 top-6 z-10 cursor-pointer border-none bg-transparent px-1 text-2xl text-white after:content-['X'];
+  }
 }
 
 @media (max-width: 468px) {
+  .burger_menu {
+    @apply relative flex cursor-pointer items-center justify-center rounded-lg border-none bg-gray-800 p-3;
+  }
 
-    .NavbarLinks {
-        @apply flex flex-col ml-20 mt-6
-    }
+  .burger_icon {
+    @apply flex h-[20px] w-[30px] flex-col justify-between;
+  }
 
-    .Button {
-        @apply inline-flex cursor-pointer delay-150 hover:text-white ml-4
-    }
+  .burger_icon span {
+    @apply mb-[6px] block h-[4px] w-full rounded-[34px] bg-gray-300;
+  }
 
+  .burger_menu_items {
+    @apply fixed left-0 top-0 z-10 flex w-[430px] flex-col justify-center rounded-md bg-gray-950 bg-opacity-50 p-4 shadow-md backdrop-blur-lg backdrop-filter;
+  }
 
-    .ItemTitle {
-        @apply text-item-title text-[15px] font-ProximSemiBold
-    }
+  .burger_menu_items a {
+    @apply cursor-pointer px-[16px] py-[8px];
+  }
 
-    .Item {
-        @apply text-[15px] text-center
-    }
+  .close_button {
+    @apply absolute right-8 top-6 z-10 cursor-pointer border-none bg-transparent px-1 text-2xl text-white after:content-['X'];
+  }
 
-    .dropdownContent {
-        @apply  border-t-2 border-x-2 border-gray-600 my-[2px] mx-[-80px] absolute rounded-[6px] cursor-default right-0 z-10 pt-4 text-center max-w-[200px] h-auto max-h-[200px] overflow-y-auto bg-dropdowns-bg text-[12px]
-    }
+  .NavbarLinks {
+    @apply ml-20 mt-6 flex flex-col;
+  }
 
-    .nav_list {
-        @apply mx-2 mt-4 flex
-    }
+  .Button {
+    @apply ml-4 inline-flex cursor-pointer delay-150 hover:text-white;
+  }
 
-    .nav_list3 {
-        @apply mx-auto mt-4 flex
-    }
+  .ItemTitle {
+    @apply font-ProximSemiBold text-[15px] text-item-title;
+  }
 
+  .Item {
+    @apply text-center text-[15px];
+  }
 
+  .dropdownContent {
+    @apply absolute right-0 z-10 mx-[-80px] my-[2px] h-auto max-h-[200px] max-w-[200px] cursor-default overflow-y-auto rounded-[6px] border-x-2 border-t-2 border-gray-600 bg-dropdowns-bg pt-4 text-center text-[12px];
+  }
+
+  .nav_list {
+    @apply mx-2 mt-4 flex;
+  }
+
+  .nav_list3 {
+    @apply mx-auto mt-4 flex;
+  }
+}
+
+@media (max-width: 390px) {
+  .burger_menu {
+    @apply relative flex cursor-pointer items-center justify-center rounded-lg border-none bg-gray-800 p-3;
+  }
+
+  .burger_icon {
+    @apply flex h-[20px] w-[30px] flex-col justify-between;
+  }
+
+  .burger_icon span {
+    @apply mb-[6px] block h-[4px] w-full rounded-[34px] bg-gray-300;
+  }
+
+  .burger_menu_items {
+    @apply fixed left-0 top-0  z-10 flex w-[430px] flex-col justify-center rounded-md bg-gray-950 bg-opacity-50 p-4 shadow-md backdrop-blur-lg backdrop-filter;
+  }
+
+  .burger_menu_items a {
+    @apply cursor-pointer py-[8px];
+  }
+
+  .close_button {
+    @apply absolute right-20 top-10 z-10 cursor-pointer border-none bg-transparent px-1 text-2xl text-white after:content-['X'];
+  }
+
+  .NavbarLinks {
+    @apply ml-20 mt-6 flex flex-col;
+  }
+
+  .Button {
+    @apply ml-4 inline-flex cursor-pointer delay-150 hover:text-white;
+  }
+
+  .ItemTitle {
+    @apply font-ProximSemiBold text-[15px] text-item-title;
+  }
+
+  .Item {
+    @apply text-center text-[15px];
+  }
+
+  .dropdownContent {
+    @apply absolute right-0 z-10 mx-[-80px] my-[2px] h-auto max-h-[200px] max-w-[200px] cursor-default overflow-y-auto rounded-[6px] border-x-2 border-t-2 border-gray-600 bg-dropdowns-bg pt-4 text-center text-[12px];
+  }
+
+  .nav_list {
+    @apply mx-2 mt-4 flex;
+  }
+
+  .nav_list3 {
+    @apply mx-auto mt-4 flex;
+  }
 }

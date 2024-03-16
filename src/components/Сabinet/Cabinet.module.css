@@ -1,0 +1,11 @@
+.page {
+  @apply px-0 py-[122px];
+}
+
+.container {
+  @apply mx-auto my-0 w-[1160px];
+}
+
+.page_title {
+  @apply relative mb-[220px] text-center text-[50px] leading-[1.15em] text-white before:mx-auto before:my-0 before:mb-[12px] before:block before:h-[103px] before:w-[89px] before:bg-[url('../../assets/before_after/panels/color-blue/line_three.svg')];
+}

@@ -1,104 +1,97 @@
 .footer {
-    @apply mt-[100px]
+  @apply mt-[100px];
 }
 
 .wrapper {
-    @apply relative py-[43px] px-0 before:top-0 before:absolute before:block before:h-[3px] before:left-0 before:right-0 before:bg-footer-gradient after:top-[240px] after:absolute after:block after:h-[3px] after:left-0 after:right-0 after:bg-footer-gradient
+  @apply relative px-0 py-[43px] before:absolute before:left-0 before:right-0 before:top-0 before:block before:h-[3px] before:bg-footer-gradient after:absolute after:left-0 after:right-0 after:top-[240px] after:block after:h-[3px] after:bg-footer-gradient;
 }
 
 .container {
-    @apply w-[1160px] my-0 mx-auto
+  @apply mx-auto my-0 w-[1160px];
 }
 
 .content {
-    @apply flex justify-between items-center
+  @apply flex items-center justify-between;
 }
 
 .content_logo {
-    @apply w-[78px] mt-10 transition duration-300 cursor-pointer ease-in-out hover:-translate-x-0.5 hover:scale-110
+  @apply mt-10 w-[78px] cursor-pointer transition duration-300 ease-in-out hover:-translate-x-0.5 hover:scale-110;
 }
 
 .content__links {
-    @apply flex w-[100%] justify-between
+  @apply flex w-[100%] justify-between;
 }
 
 .title {
-    @apply text-footer-color text-[18px] mb-[24px] font-ProximSemiBold
+  @apply mb-[24px] font-ProximSemiBold text-[18px] text-footer-color;
 }
 
 .socials {
-    @apply flex
+  @apply flex;
 }
 
-
 .social_ds {
-    @apply w-[24px] h-[24px] flex items-center ease-in-out hover:-translate-y-0.5 hover:scale-110 mr-[16px] transition duration-300  cursor-pointer
+  @apply mr-[16px] flex h-[24px] w-[24px] cursor-pointer items-center transition duration-300 ease-in-out hover:-translate-y-0.5  hover:scale-110;
 }
 
 .social_vk {
-    @apply w-[24px] h-[24px] flex items-center ease-in-out hover:-translate-y-0.5 hover:scale-110 mr-[16px] transition duration-300  cursor-pointer
+  @apply mr-[16px] flex h-[24px] w-[24px] cursor-pointer items-center transition duration-300 ease-in-out hover:-translate-y-0.5  hover:scale-110;
 }
 
 .link_a {
-    @apply mb-[12px] cursor-pointer text-[18px] block hover:text-link-gradient font-ProximSemiBold
+  @apply mb-[12px] block cursor-pointer font-ProximSemiBold text-[18px] hover:text-link-gradient;
 }
 
 .copy {
-    @apply py-[24px] pb-[40px]
+  @apply py-[24px] pb-[40px];
 }
 
 .copyright {
-    @apply text-footer-color block font-ProximSemiBold text-[16px]
+  @apply block font-ProximSemiBold text-[16px] text-footer-color;
 }
 
 .logo {
-    @apply h-16
+  @apply h-16;
 }
-
-
 
 @media (max-width: 468px) {
+  .footer {
+    @apply items-center text-center;
+  }
 
-    .footer {
-        @apply text-center items-center
-    }
-    .content_logo {
-        @apply w-[50px] mb-4
-    }
+  .content_logo {
+    @apply mb-4 w-[50px];
+  }
 
-    .socials {
-        @apply mb-4
-    }
+  .socials {
+    @apply mb-4;
+  }
 
-    .social_ds {
-        @apply ml-[50px]
-    }
+  .social_ds {
+    @apply ml-[50px];
+  }
 
-    .wrapper {
-        @apply py-[5px] after:top-[700px]
-    }
+  .wrapper {
+    @apply py-[5px] after:top-[700px];
+  }
 
-    .title {
-        @apply text-[16px] mb-[15px] mt-[20px] font-ProximSemiBold
-    }
+  .title {
+    @apply mb-[15px] mt-[20px] font-ProximSemiBold text-[16px];
+  }
 
-    .link_a {
-        @apply text-[15px]
-    }
+  .link_a {
+    @apply text-[15px];
+  }
 
-    .container {
-        @apply w-[400px] my-0
-    }
+  .container {
+    @apply my-0 w-[400px];
+  }
 
+  .content__links {
+    @apply flex flex-col items-center;
+  }
 
-    .content__links {
-        @apply flex flex-col items-center
-    }
-
-    .copyright {
-        @apply text-footer-color mr-[30px] block font-ProximSemiBold text-[14px]
-    }
-
+  .copyright {
+    @apply mr-[30px] block font-ProximSemiBold text-[14px] text-footer-color;
+  }
 }
-
-

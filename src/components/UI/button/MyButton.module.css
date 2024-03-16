@@ -1,23 +1,21 @@
 .myBtn {
-    @apply py-2 px-[15px] my-4 text-[18px] font-ProximSemiBold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg
+  @apply my-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-[15px] py-2 font-ProximSemiBold text-[18px] text-white;
 }
 
 .myBtn:hover {
-    transition: .3s;
-    border-color: #9008FE;
-    box-shadow: 0 0 14px #0C83FF;
+  transition: 0.3s;
+  border-color: #9008fe;
+  box-shadow: 0 0 14px #0c83ff;
 }
 
 @media (max-width: 320px) {
-    .myBtn {
-        @apply px-20 py-2 mx-auto
-    }
-
+  .myBtn {
+    @apply mx-auto px-20 py-2;
+  }
 }
 
 @media (max-width: 480px) {
-    .myBtn {
-        @apply px-20 py-2 mx-auto
-    }
-
+  .myBtn {
+    @apply mx-auto px-20 py-2;
+  }
 }

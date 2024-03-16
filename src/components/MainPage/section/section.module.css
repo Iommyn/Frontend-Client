@@ -1,120 +1,155 @@
 .main {
-    @apply mt-[230px]
+  @apply mt-[230px];
 }
 
 .main_servers {
-    @apply relative before:bg-[url('../../../assets/before_after/servers.png')] before:bg-no-repeat before:bg-left before:absolute before:block before:left-[30px] before:right-0 before:top-0 before:h-[130px]
+  @apply relative before:absolute before:left-[30px] before:right-0 before:top-0 before:block before:h-[130px] before:bg-[url('../../../assets/before_after/servers.png')] before:bg-left before:bg-no-repeat;
 }
 
 .container {
-    @apply w-[1160px] my-0 mx-auto
+  @apply mx-auto my-0 w-[1160px];
 }
 
 .section_title {
-    @apply flex justify-between items-center mb-[74px]
+  @apply mb-[74px] flex items-center justify-between;
 }
 
 .h2 {
-    @apply text-[42px] font-ProximBold items-center flex mb-[30px] text-white mt-8 before:bg-[url('../../../assets/before_after/panels/color-blue/line_three.svg')] before:w-[69px] before:h-[73px] before:bg-no-repeat before:block before:mr-[12px] before:bg-contain
+  @apply mb-[30px] mt-8 flex items-center font-ProximBold text-[42px] text-white before:mr-[12px] before:block before:h-[73px] before:w-[69px] before:bg-[url('../../../assets/before_after/panels/color-blue/line_three.svg')] before:bg-contain before:bg-no-repeat;
 }
-
 
 .play_with_friends {
-    @apply pb-[230px] relative before:bg-[url('../../../assets/before_after/play.svg')] before:bg-no-repeat before:bg-left before:absolute before:block before:left-[30px] before:right-0 before:h-[240px] before:top-[40px]
+  @apply relative pb-[230px] before:absolute before:left-[30px] before:right-0 before:top-[40px] before:block before:h-[240px] before:bg-[url('../../../assets/before_after/play.svg')] before:bg-left before:bg-no-repeat;
 }
 
-
 .container {
-    @apply w-[1160px] my-0 mx-auto
+  @apply mx-auto my-0 w-[1160px];
 }
 
 .section_title__play {
-    @apply flex justify-between text-white items-center mb-[74px] pt-[85px]
+  @apply mb-[74px] flex items-center justify-between pt-[85px] text-white;
 }
 
-
 .h2_play {
-    @apply text-[42px] font-ProximBold items-center flex mb-[30px] text-white mt-8 before:bg-[url('../../../assets/before_after/panels/color-blue/h-elements.svg')] before:w-[69px] before:h-[73px] before:bg-no-repeat before:block before:mr-[12px] before:bg-contain
+  @apply mb-[30px] mt-8 flex items-center font-ProximBold text-[42px] text-white before:mr-[12px] before:block before:h-[73px] before:w-[69px] before:bg-[url('../../../assets/before_after/panels/color-blue/h-elements.svg')] before:bg-contain before:bg-no-repeat;
 }
 
 .socials {
-    @apply flex justify-between
+  @apply flex justify-between;
 }
 
 .socials_vk {
-    @apply bg-socials-gradient-vk w-calc-100 flex flex-wrap h-[260px] rounded-[8px] justify-center content-center
+  @apply flex h-[260px] w-calc-100 flex-wrap content-center justify-center rounded-[8px] bg-socials-gradient-vk;
 }
 
 .social_img {
-    @apply w-[64px] h-[64px] flex items-center justify-center
+  @apply flex h-[64px] w-[64px] items-center justify-center;
 }
 
-
 .social_title {
-    @apply w-[100%] text-center font-ProximBold mt-[12px] text-[28px] text-white mb-[26px]
+  @apply mb-[26px] mt-[12px] w-[100%] text-center font-ProximBold text-[28px] text-white;
 }
 
 .social_link {
-    @apply bg-socials-gradient-ds font-ProximSemiBold  text-[16px] py-[10px] px-[35px] rounded-[6px] flex items-center transition-opacity duration-0.3s hover:text-white hover:bg-footer-gradient before:w-[24px] before:h-[24px] before:block before:bg-[url('../../../assets/section_socials/open.svg')] before:bg-no-repeat before:bg-center before:bg-contain before:mr-[10px]
+  @apply flex items-center  rounded-[6px] bg-socials-gradient-ds px-[35px] py-[10px] font-ProximSemiBold text-[16px] transition-opacity duration-0.3s before:mr-[10px] before:block before:h-[24px] before:w-[24px] before:bg-[url('../../../assets/section_socials/open.svg')] before:bg-contain before:bg-center before:bg-no-repeat hover:bg-footer-gradient hover:text-white;
 }
-
-
 
 .socials_ds {
-    @apply bg-socials-gradient-ds w-calc-100 flex flex-wrap h-[260px] rounded-[8px] justify-center content-center
+  @apply flex h-[260px] w-calc-100 flex-wrap content-center justify-center rounded-[8px] bg-socials-gradient-ds;
 }
 
-@media (max-width: 768px ) {
+@media (max-width: 768px) {
+  .main_servers {
+    @apply before:content-none;
+  }
 
-    .main_servers {
-        @apply  before:content-none
-    }
+  .play_with_friends {
+    @apply before:content-none;
+  }
 
-    .play_with_friends {
-        @apply  before:content-none
-    }
+  .socials {
+    @apply flex flex-col;
+  }
 
-    .socials {
-        @apply flex flex-col
-    }
+  .socials_vk {
+    @apply mb-12 ml-[120px];
+  }
 
-    .socials_vk {
-        @apply mb-12 ml-[120px]
-    }
-
-    .socials_ds {
-        @apply ml-[120px]
-    }
-
+  .socials_ds {
+    @apply ml-[120px];
+  }
 }
 
-@media (max-width: 368px ) {
+@media (max-width: 600px) {
+  .main_servers {
+    @apply before:content-none;
+  }
 
-    .h2_play {
-        @apply text-[25px]
-    }
+  .play_with_friends {
+    @apply before:content-none;
+  }
 
+  .socials {
+    @apply flex flex-col;
+  }
 
-    .main {
-        @apply mt-[130px]
-    }
+  .socials_vk {
+    @apply mb-12 ml-[20px];
+  }
 
-    .h2 {
-        @apply pb-[2px]
-    }
+  .socials_ds {
+    @apply ml-[20px];
+  }
+}
 
+@media (max-width: 468px) {
+  .h2_play {
+    @apply text-[35px];
+  }
 
-    .socials_vk {
-        @apply mb-12 ml-[35px] w-[300px] h-[200px]
-    }
+  .main {
+    @apply mt-[130px];
+  }
 
-    .socials_ds {
-        @apply ml-[35px] w-[300px] h-[200px]
-    }
+  .h2 {
+    @apply pb-[2px] text-[35px];
+  }
 
-    .social_img {
-        @apply w-[34px] h-[34px]
-    }
+  .socials_vk {
+    @apply mb-12 ml-[60px] h-[200px] w-[300px];
+  }
 
+  .socials_ds {
+    @apply ml-[60px] h-[200px] w-[300px];
+  }
 
+  .social_img {
+    @apply h-[34px] w-[34px];
+  }
+}
+
+@media (max-width: 380px) {
+  .h2_play {
+    @apply text-[30px];
+  }
+
+  .main {
+    @apply mt-[130px];
+  }
+
+  .h2 {
+    @apply pb-[2px] text-[30px];
+  }
+
+  .socials_vk {
+    @apply mb-12 ml-[30px] h-[200px] w-[300px];
+  }
+
+  .socials_ds {
+    @apply ml-[30px] h-[200px] w-[300px];
+  }
+
+  .social_img {
+    @apply h-[34px] w-[34px];
+  }
 }

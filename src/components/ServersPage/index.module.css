@@ -1,15 +1,15 @@
 .page {
-    @apply py-[122px] px-0
+  @apply px-0 py-[122px];
 }
 
 .container {
-    @apply w-[1160px] my-0 mx-auto
+  @apply mx-auto my-0 w-[1160px];
 }
 
 .page_title {
-    @apply text-[50px] text-white text-center leading-[1.15em] mb-[20px] relative before:bg-[url('../../../assets/before_after/panels/color-blue/line_three.svg')] before:w-[89px] before:h-[103px] before:block before:my-0 before:mx-auto before:mb-[12px]
+  @apply relative mb-[20px] text-center text-[50px] leading-[1.15em] text-white before:mx-auto before:my-0 before:mb-[12px] before:block before:h-[103px] before:w-[89px] before:bg-[url('../../../assets/before_after/panels/color-blue/line_three.svg')];
 }
 
 .page_description {
-    @apply text-[30px] text-footer-color text-center leading-[1.15em] mb-[220px]
+  @apply mb-[220px] text-center text-[30px] leading-[1.15em] text-footer-color;
 }

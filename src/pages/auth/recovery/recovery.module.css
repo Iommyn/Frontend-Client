@@ -1,21 +1,17 @@
 .section {
-    @apply pt-28 min-h-[100vh]
+  @apply min-h-[100vh] pt-28;
 }
-
 
 .h1_Confirm {
-    @apply text-white text-center mb-8 text-[32px] font-ProximExtraBold
+  @apply mb-8 text-center font-ProximExtraBold text-[32px] text-white;
 }
 
+@media (max-width: 480px) {
+  .section {
+    @apply min-h-[120vh] pt-10;
+  }
 
-
-@media (max-width: 480px ) {
-    .section {
-        @apply pt-10 min-h-[120vh]
-    }
-
-    .h1 {
-        @apply text-[22px]
-    }
-
+  .h1 {
+    @apply text-[22px];
+  }
 }

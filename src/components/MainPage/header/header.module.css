@@ -6,193 +6,62 @@
 * Don't get lost)
 **/
 
-
 /* Here the wrapper for header is the header of the header page. */
 
 .sliderBlock {
-    @apply relative pb-[250px] pt-[90px] before:bg-[url('../../../assets/before_after/panels/color-purple/elements.svg')] before:bg-no-repeat before:absolute before:h-[1000px] before:right-0 before:left-0 before:bg-contain
+  @apply relative pb-[250px] pt-[90px]  before:absolute before:left-0 before:right-0 before:h-[1000px] before:bg-[url('../../../assets/before_after/panels/color-purple/elements.svg')] before:bg-contain before:bg-no-repeat mobile:pb-[300px] mobile:pt-[200px] mobile:before:h-[350px] sl:pt-[10px] sl:before:h-[550px] lg:pt-[10px] lg:before:h-[650px] sm:pt-[70px] sm:before:h-[700px];
 }
 
 .wrapper {
-    @apply mx-auto w-[1160px]
+  @apply mx-auto w-[1160px] mobile:w-[330px] tablet:w-[500px] sl:mt-[100px] sl:w-[400px] laptop:w-[400px] lg:mt-[50px] lg:w-[770px] sm:w-[1000px] desktop:w-[1170px];
 }
 
 .slider {
-    @apply relative
+  @apply relative;
 }
 
 .slide {
-    @apply flex justify-between items-center
+  @apply flex items-center justify-between;
 }
-
-
-
 
 /* MainPage information about the site */
 
 .slide__info {
-    @apply flex-shrink-0  relative after:bg-[url('../../../assets/before_after/panels/color-blue/elements.svg')] after:block after:w-[130px] after:h-[100px] after:right-[-90px] after:top-[-40px] after:absolute
+  @apply relative  flex-shrink-0 after:absolute after:right-[-90px] after:top-[-40px] after:block after:h-[100px] after:w-[130px] after:bg-[url('../../../assets/before_after/panels/color-blue/elements.svg')] mobile:after:hidden;
 }
 
 .slide__info > h3 {
-    @apply mb-3 text-base tracking-wider text-gray-400 uppercase font-ProximBold leading-[1.3em]
+  @apply mb-3 font-ProximBold text-base uppercase leading-[1.3em] tracking-wider text-gray-400 mobile:text-[12px] laptop:text-[15px] lg:text-[15px];
 }
 
 .slide__info > h1 {
-    @apply mb-7 text-[64px] text-white font-ProximExtraBold -tracking-tighter leading-[1.15em]
+  @apply mb-7 font-ProximExtraBold text-[64px] leading-[1.15em] -tracking-tighter text-white mobile:text-[40px] laptop:text-[50px] lg:text-[45px] sm:text-[50px];
 }
 
 .slide__info > h2 {
-    @apply text-2xl text-gray-400 font-ProximSemiBold leading-[1.3em] mb-[40px]
+  @apply mb-[40px] font-ProximSemiBold text-2xl leading-[1.3em] text-gray-400 mobile:text-[15px] laptop:text-[22px] lg:text-[20px] sm:text-[20px];
 }
 
-
 .button {
-    @apply p-4 w-full text-3xl font-ProximSemiBold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg
+  @apply w-full rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 p-4 font-ProximSemiBold text-3xl text-white mobile:p-[2px] mobile:text-[20px] laptop:p-[5px] laptop:text-[25px] lg:p-[5px] lg:text-[25px] sm:p-[7px];
 }
 
 .button:hover {
-    transition: .3s;
-    border-color: #9008FE;
-    box-shadow: 0 0 14px #0C83FF;
+  transition: 0.3s;
+  border-color: #9008fe;
+  box-shadow: 0 0 14px #0c83ff;
 }
-
 
 .slide_img {
-    @apply mr-[-275px] w-[760px]
+  @apply mr-[-275px] w-[760px] mobile:hidden tablet:hidden sl:hidden laptop:mr-[60px] laptop:w-[500px] lg:mr-[-200px] lg:w-[430px] sm:mr-[-130px] sm:w-[500px] desktop:mr-[-160px] desktop:w-[650px];
 }
-
-
-
 
 /* Here I was completely burned out and decided to write down the usual styles. I hope everything is clear :D */
 
 .online_amount {
-    @apply absolute left-calc-620 bottom-[60px] bg-online-amount-rgba backdrop-blur-[80px] py-[25px] px-[35px] rounded-[8px]
+  @apply absolute bottom-[60px] left-calc-620 rounded-[8px] bg-online-amount-rgba px-[35px] py-[20px] backdrop-blur-[80px]  laptop:bottom-[60px] laptop:left-[140px] laptop:top-[450px] laptop:bg-gray-800 laptop:px-[10px] laptop:py-[12px] laptop:pb-10 lg:bottom-[60px] lg:left-[120px] lg:top-[380px] lg:bg-gray-800 lg:px-[10px] lg:py-[12px] lg:pb-10 sm:bottom-[60px] sm:left-[120px] sm:top-[430px] sm:bg-gray-800 sm:px-[10px] sm:py-[12px] sm:pb-10 sl:left-[170px] sl:top-[450px] sl:bg-gray-800 sl:px-[12px] sl:py-[12px] sl:pb-10
 }
 
 .online_amount__amount {
-    @apply text-white font-ProximRegular text-[18px] flex items-center before:w-[8px] before:h-[8px] before:rounded-[50px] before:bg-online-amount before:block before:mr-[10px]
-}
-
-
-
-@media (max-width: 1700px ) {
-
-    .sliderBlock {
-        @apply pt-[150px] before:h-[800px]
-    }
-
-    .wrapper {
-        @apply mx-auto w-[1200px]
-    }
-
-    .slide_img {
-        @apply ml-[2px] mr-[-140px] w-[720px]
-    }
-
-    .online_amount {
-        @apply left-[560px]
-    }
-
-    .button {
-        padding: 15px 0;
-        width: 100%;
-    }
-
-}
-
-@media (max-width: 1400px ) {
-
-    .sliderBlock {
-        @apply  before:h-[600px]
-    }
-
-    .slide_img {
-        @apply mr-[-10px] w-[520px]
-    }
-
-    .wrapper {
-        @apply mx-auto w-[1060px]
-    }
-
-    .slide__info > h3 {
-        @apply mb-3 text-[12px] tracking-wider text-gray-400 uppercase font-ProximBold leading-[1.3em]
-    }
-
-    .slide__info > h1 {
-        @apply mb-7 text-[44px] text-white font-ProximExtraBold -tracking-tighter leading-[1.15em]
-    }
-
-    .slide__info > h2 {
-        @apply text-[20px] text-gray-400 font-ProximSemiBold leading-[1.3em] mb-[40px]
-    }
-
-    .button {
-        @apply text-[24px] py-[7px]
-    }
-
-    .online_amount {
-        @apply left-[460px] py-[15px] px-[20px]
-    }
-
-}
-
-@media (max-width: 768px ) {
-
-    .wrapper {
-        @apply mx-auto w-[660px]
-    }
-
-    .slide__info {
-        @apply after:w-[140px] after:h-[100px] after:right-[-40px] after:top-[-60px]
-    }
-
-    .slide_img {
-        @apply mr-[-40px] w-[340px]
-    }
-
-    .slide__info > h3 {
-        @apply mb-3 text-[12px] tracking-wider text-gray-400 uppercase font-ProximBold leading-[1.3em]
-    }
-
-    .slide__info > h1 {
-        @apply mb-7 text-[35px] text-white font-ProximExtraBold -tracking-tighter leading-[1.15em]
-    }
-
-    .slide__info > h2 {
-        @apply text-[15px] text-gray-400 font-ProximSemiBold leading-[1.3em] mb-[40px]
-    }
-
-    .button {
-        @apply text-[18px] py-[4px]
-    }
-
-    .online_amount {
-        @apply top-[400px] left-[260px] py-[20px] pb-10 px-[10px] bottom-[60px] bg-gray-800
-    }
-
-
-}
-
-
-
-@media (max-width: 368px ) {
-
-    .wrapper {
-        @apply mx-auto w-[340px]
-    }
-
-    .sliderBlock {
-        @apply  before:h-[400px]
-    }
-
-    .slide_img {
-        @apply hidden
-    }
-
-    .online_amount {
-        @apply top-[350px] left-[80px] py-[20px] pb-10 px-[10px] bottom-[60px] bg-gray-800
-    }
-    
+  @apply flex items-center font-ProximRegular text-[20px] text-white before:mr-[10px] before:block before:h-[8px] before:w-[8px] before:rounded-[50px] before:bg-online-amount sm:text-[20px];
 }

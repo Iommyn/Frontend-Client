@@ -1,58 +1,57 @@
 .preloader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .spinner {
-    width: 60px;
-    height: 60px;
-    position: relative;
+  width: 60px;
+  height: 60px;
+  position: relative;
 }
 
 .spinner:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 70%;
-    height: 70%;
-    background-color: transparent;
-    border: 4px solid #3f51b5; /* синий цвет, можно изменить на другой синий */
-    border-top-color: #fff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background-color: transparent;
+  border: 4px solid #3f51b5; /* синий цвет, можно изменить на другой синий */
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .title {
-    @apply text-center font-ProximBold text-webview-link mt-8 text-[40px]
+  @apply mt-8 text-center font-ProximBold text-[40px] text-webview-link;
 }
 
 .information {
-    @apply text-center  font-ProximSemiBold text-footer-color mt-4 text-[43px]
+  @apply mt-4  text-center font-ProximSemiBold text-[43px] text-footer-color;
 }
 
 .preloader {
-    @apply min-h-[140vh]
+  @apply min-h-[100vh];
 }
 
+@media (max-width: 480px) {
+  .title {
+    @apply text-[25px];
+  }
 
-@media (max-width: 480px ) {
-    .title {
-        @apply text-[25px]
-    }
-    .information {
-        @apply text-[20px] mb-5
-    }
+  .information {
+    @apply mb-5 text-[20px];
+  }
 
-    .spinner {
-        @apply w-[40px] h-[40px]
-    }
+  .spinner {
+    @apply h-[40px] w-[40px];
+  }
 }
-
