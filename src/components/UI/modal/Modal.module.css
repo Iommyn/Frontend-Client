@@ -1,0 +1,52 @@
+.modal {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50
+}
+
+.modal_content {
+    @apply bg-gray-800 p-[50px] rounded-[12px]
+}
+
+.logo {
+    @apply ml-[140px] mb-9
+}
+
+.btn {
+    @apply  mt-16 ml-[50px] text-[20px] font-semibold rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 p-3
+}
+
+.btn:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 14px #4869be;
+}
+
+.title {
+    @apply text-[20px] font-semibold
+}
+
+.balance {
+    @apply mx-[80px] w-[280px] h-[47px] bg-gray-700 px-4 text-white text-[22px] bg-gray-800;
+}
+.titleDtn {
+    @apply text-white text-[30px] mx-[60px] font-extrabold mb-14
+}
+
+.amount_buttons {
+    @apply flex mx-[10px] space-x-8 mb-[30px]
+}
+
+.h1 {
+    @apply mx-[80px] mb-4  text-footer-color text-[16px] font-semibold
+}
+
+.modal_content_donate {
+    @apply bg-gray-900 p-[30px] rounded-[12px]
+}
+
+.btnDonate {
+    @apply  text-white mt-12 ml-[70px] text-[23px] font-semibold rounded-lg bg-gray-700 p-4 w-[300px]
+}
+
+.btnDonate:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 14px #4869be;
+}

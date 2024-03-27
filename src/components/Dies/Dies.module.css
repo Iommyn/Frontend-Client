@@ -1,9 +1,9 @@
 .page {
-    @apply px-0 py-[112px];
+    @apply min-h-[76vh] px-0 py-[112px];
 }
 
 .container {
-    @apply mx-auto my-0 w-[1160px];
+    @apply mx-auto my-0 w-[1160px] ;
 }
 
 .page_title {
@@ -13,19 +13,19 @@
 
 
 .dieOne {
-    @apply bg-dies-help   ml-12 w-[320px] h-[657px] rounded-[8px] border border-gray-700;
+    @apply bg-dies-help   ml-12 w-[320px] h-auto pb-6 rounded-[8px] border border-gray-900;
 }
 
 .dieTwo {
-    @apply bg-dies-help  ml-12 w-[320px] h-[657px] rounded-[8px] border-[3px] border-l-pink-600 border-r-pink-500 border-t-fuchsia-600 border-b-fuchsia-700
+    @apply bg-dies-help  ml-12 w-[320px] h-auto pb-6 rounded-[8px] border-[3px] border-l-pink-600 border-r-pink-600 border-t-fuchsia-600 border-b-fuchsia-700
 }
 
 .dieThree {
-    @apply bg-dies-help ml-12 w-[320px] h-[657px] rounded-[8px] border border-gray-700
+    @apply bg-dies-help ml-12 w-[320px] h-auto pb-6  rounded-[8px] border border-gray-900
 }
 
 .h2 {
-    @apply mt-[100px] mx-[42px] text-[18px] font-bold
+    @apply  mx-[42px] text-[18px] font-bold
 }
 
 .h3 {
@@ -48,4 +48,14 @@
 .button:hover {
     transition: 0.3s;
     box-shadow: 0 0 14px #0c83ff;
+}
+
+
+.infoBtn {
+    @apply ml-[475px] rounded-lg bg-gradient-to-r from-red-500 to-fuchsia-500 p-3 font-ProximRegular text-[25px] text-gray-300 mobile:p-[2px] mobile:text-[20px] laptop:p-[5px] laptop:text-[25px] lg:p-[5px] lg:text-[25px] sm:p-[7px];
+}
+
+.infoBtn:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 14px #ae5ac4;
 }

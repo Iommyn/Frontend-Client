@@ -1,5 +1,5 @@
 .page {
-  @apply px-0 py-[122px];
+  @apply px-0 pt-[122px];
 }
 
 .container {
@@ -7,9 +7,50 @@
 }
 
 .page_title {
-  @apply relative mb-[20px] text-center text-[50px] leading-[1.15em] text-white before:mx-auto before:my-0 before:mb-[12px] before:block before:h-[103px] before:w-[89px] before:bg-[url('../../../assets/before_after/panels/color-blue/line_three.svg')];
+  @apply relative mb-[20px] text-center font-extrabold text-[56px] leading-[1.15em] text-white before:mx-auto before:my-0 before:mb-[12px] before:block before:h-[103px] before:w-[99px] before:bg-[url('../../assets/before_after/panels/color-blue/line_three.svg')];
 }
 
 .page_description {
-  @apply mb-[220px] text-center text-[30px] leading-[1.15em] text-footer-color;
+  @apply mb-[80px] text-center text-[20px] font-semibold leading-[1.15em] text-footer-color;
+}
+
+.image {
+  @apply ml-12 mb-[71px]
+}
+
+.button {
+  @apply w-[236px] mb-[230px] mt-[16px] text-white mx-[480px] rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 p-3 font-ProximSemiBold text-[20px] transition duration-300 ease-in-out shadow-md
+}
+
+.button:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 14px #0c83ff;
+}
+
+.test {
+  @apply w-[398px]  px-4 h-[86px] pb-6 rounded-[8px] border border-gray-900;
+}
+
+.title {
+  @apply mt-[284px] mb-[105px]
+}
+
+
+.h2 {
+  @apply mb-[30px] mt-8 flex items-center font-ProximBold text-[42px] text-white before:mr-[12px] before:block before:h-[73px] before:w-[69px] before:bg-[url('../../assets/before_after/panels/color-blue/line_three.svg')] before:bg-contain before:bg-no-repeat;
+}
+
+
+
+
+.imageMods {
+  @apply absolute ml-[-62px]
+}
+
+.servers {
+  @apply mt-[400px]
+}
+
+.wrapper {
+  @apply  ml-[380px] mt-28
 }

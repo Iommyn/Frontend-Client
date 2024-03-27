@@ -7,21 +7,21 @@ export const servers = [
         id: 1,
         name: 'Magic',
         version: 'Версия 1.7.10',
-        link: '/test',
+        link: '/TechnoMagic',
         image: server1
     },
     {
         id: 2,
         name: 'TechnoMagic',
         version: 'Версия 1.7.10',
-        link: '/test',
+        link: '/TechnoMagic',
         image: server2
     },
     {
         id: 3,
         name: 'HiTech',
         version: 'Версия 1.7.10',
-        link: '/test',
+        link: '/TechnoMagic',
         image: server3
     }
 ];

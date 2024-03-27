@@ -1,25 +1,30 @@
 export interface IUser {
-  email?: string;
-  token?: string;
-  refreshToken?: string;
-  username?: string;
+  email: string;
+  token: string;
+  username: string;
 }
 
 export interface IUserData {
-  email?: string;
+  email: string;
   password: string;
   username: string;
-  user?: {
+  oldPassword: string;
+  newPassword: string;
+  user: {
     username: string;
   };
-  token?: string;
+  token: string;
+  tokenExpiresAt: string;
+  refreshToken: string;
+  refreshTokenExpiresAt: string;
 }
 
+
 export interface IUserDataRecovery {
-  code?: string;
-  password?: string;
-  username?: string;
-  email?: string;
+  code: string;
+  password: string;
+  username: string;
+  email: string;
 }
 
 export interface IResponseUser {

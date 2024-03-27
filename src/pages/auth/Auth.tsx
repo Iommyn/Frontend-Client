@@ -11,6 +11,7 @@ import { login } from "../../store/user/userSlice";
 import ReCAPTCHA from "react-google-recaptcha";
 import s from "./auth.module.css";
 
+
 const Auth: FC = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -28,7 +29,9 @@ const Auth: FC = () => {
       const data = await AuthService.login({ username, password });
       if (data) {
         setTokenToLocalStorage("token", data.token);
+        setTokenToLocalStorage("tokenExpiresAt", data.tokenExpiresAt);
         setTokenToLocalStorage("refreshToken", data.refreshToken);
+        setTokenToLocalStorage("refreshTokenExpiresAt", data.refreshTokenExpiresAt);
         dispatch(login(data));
         localStorage.setItem("isAuth", JSON.stringify(true));
         toast.success("Вы успешно прошли авторизацию");

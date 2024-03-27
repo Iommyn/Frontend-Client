@@ -36,8 +36,9 @@ const ProfileLogout: FC = () => {
   const logoutHandler = () => {
     dispatch(logout());
     removeTokenFromLocalStorage("token");
-    removeTokenFromLocalStorage("refreshToken");
-    localStorage.removeItem("isAuth");
+    removeTokenFromLocalStorage("isAuth");
+    removeTokenFromLocalStorage("username");
+    removeTokenFromLocalStorage("tokenExpiresAt");
     toast.info("Вы успешно вышли!");
     navigate("/");
   };

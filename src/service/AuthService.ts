@@ -5,6 +5,7 @@ import {
 } from "../types/types";
 import { instance } from "../api/axios.api";
 
+
 export const AuthService = {
   async login(userData: IUserData): Promise<any | undefined> {
     const { data } = await instance.post<IUserData>("/site/login", userData);
@@ -12,6 +13,9 @@ export const AuthService = {
     return {
       token: data.token,
       username: data.user.username,
+      tokenExpiresAt: data.tokenExpiresAt,
+      refreshToken: data.refreshToken,
+      refreshTokenExpiresAt: data.refreshTokenExpiresAt,
     };
   },
 
@@ -33,6 +37,15 @@ export const AuthService = {
     return data;
   },
 
+
+  async resetPassword(userData: IUserData, newAccessToken: void): Promise<IResponseUserData | undefined> {
+    const { data } = await instance.post<IResponseUserData>(
+      "/middleware/site/password/reset",
+      userData,
+    );
+    return data;
+  },
+
   async Recovered(userData: IUserDataRecovery): Promise<any | undefined> {
     const { data } = await instance.post<IUserData>("/site/recovery", userData);
     return data;
@@ -48,15 +61,14 @@ export const AuthService = {
     return data;
   },
 
-  async refreshTokenRequest(userData: {
-    refreshToken: string;
-  }): Promise<any | undefined> {
+
+  getSkin: async () => {
     try {
-      const { data } = await instance.post("/site/refresh", userData);
+      const { data } = await instance.post("/middleware/site/skin/add");
       return data;
     } catch (error) {
-      console.error("Ошибка при обновлении токена:", error);
-      return undefined;
+      console.error("Ошибка при получении скина");
     }
   },
-};
+
+}
