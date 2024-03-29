@@ -21,11 +21,12 @@ const Settings = () => {
     }
   };
 
-  const handleFormSubmit = async (e) => {
+
+    const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (newPassword === confirmPassword) {
+      await AuthService.refreshAccessToken(localStorage.getItem('refreshToken'));
       try {
-
         const data = await AuthService.resetPassword({ oldPassword, newPassword });
         if (data) {
           toast.success("Пароль изменен!");
@@ -69,7 +70,7 @@ const Settings = () => {
           onChange={handleChange}
           style={{ width: '357px', marginLeft: '30px', outline: 'none', marginTop: '0px' }}
         />
-        <button type="submit" className={s.btnSettings}>Изменить пароль</button>
+        <button className={s.btnSettings}>Изменить пароль</button>
       </form>
     </div>
   );

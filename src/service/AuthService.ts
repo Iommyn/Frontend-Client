@@ -38,13 +38,7 @@ export const AuthService = {
   },
 
 
-  async resetPassword(userData: IUserData, newAccessToken: void): Promise<IResponseUserData | undefined> {
-    const { data } = await instance.post<IResponseUserData>(
-      "/middleware/site/password/reset",
-      userData,
-    );
-    return data;
-  },
+
 
   async Recovered(userData: IUserDataRecovery): Promise<any | undefined> {
     const { data } = await instance.post<IUserData>("/site/recovery", userData);
@@ -61,6 +55,16 @@ export const AuthService = {
     return data;
   },
 
+  async resetPassword(userData: IUserData): Promise<any | undefined> {
+    try {
+      const response = await instance.post('/middleware/site/password/reset', userData);
+
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  },
+
 
   getSkin: async () => {
     try {
@@ -70,5 +74,17 @@ export const AuthService = {
       console.error("Ошибка при получении скина");
     }
   },
+
+  async refreshAccessToken(refreshToken: string): Promise<any | undefined> {
+    const { data } = await instance.post("/site/refresh", {
+      refreshToken: refreshToken,
+    });
+
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("tokenExpiresAt", data.tokenExpiresAt);
+
+    instance.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
+  }
+
 
 }

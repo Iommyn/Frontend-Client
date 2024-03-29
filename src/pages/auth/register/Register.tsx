@@ -24,6 +24,7 @@ const Register: FC = () => {
         toast.error("Пожалуйста, пройдите проверку reCAPTCHA");
         return;
       }
+
       const data = await AuthService.Register({ username, email, password });
       if (data) {
         toast.warning("Потвердите код, который находится на вашей почте!");

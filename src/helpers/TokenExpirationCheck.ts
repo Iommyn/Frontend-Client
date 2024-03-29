@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import moment from 'moment';
 import { toast } from "react-toastify";
 import { useAppDispatch } from "../store/hooks";
-import { getTokenFromLocalStorage } from "./localstorage";
+import { getTokenFromLocalStorage, removeTokenFromLocalStorage } from "./localstorage";
 import { logout, login } from "../store/user/userSlice";
 import { useNavigate } from "react-router-dom";
 
@@ -26,10 +26,12 @@ const TokenExpirationCheck = () => {
         if (currentTime > tokenExpiration) {
           setTokenExpired(true);
           dispatch(logout());
-          localStorage.removeItem('token');
-          localStorage.removeItem('tokenExpiresAt');
-          localStorage.removeItem('isAuth');
-          localStorage.removeItem('username');
+          removeTokenFromLocalStorage('token');
+          removeTokenFromLocalStorage('tokenExpiresAt');
+          removeTokenFromLocalStorage('isAuth');
+          removeTokenFromLocalStorage('refreshToken');
+          removeTokenFromLocalStorage('refreshTokenExpiresAt');
+          removeTokenFromLocalStorage('username');
           toast.warning('Срок действия токена истек, пожалуйста, авторизуйтесь снова');
           navigate("/auth");
         }

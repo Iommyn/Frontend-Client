@@ -4,6 +4,7 @@ import check from '../../assets/page_cabinet/icons/img_balance.png';
 import ModalDonate from "../UI/modal/ModalDonate";
 import PersonPlayer from "./PersonPlayer";
 import Settings from "./Settings";
+import { Route, Routes } from "react-router-dom";
 const Cabinet = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(0); // устанавливаем начальное значение равным индексу "Персонаж"

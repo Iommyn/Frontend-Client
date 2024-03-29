@@ -24,13 +24,16 @@ const Auth: FC = () => {
     try {
       e.preventDefault();
 
-      // Проверяем, что reCAPTCHA пройдена
+      if (!recaptchaValue) {
+        toast.error("Пожалуйста, пройдите проверку reCAPTCHA");
+        return;
+      }
 
       const data = await AuthService.login({ username, password });
       if (data) {
         setTokenToLocalStorage("token", data.token);
         setTokenToLocalStorage("tokenExpiresAt", data.tokenExpiresAt);
-        setTokenToLocalStorage("refreshToken", data.refreshToken);
+        localStorage.setItem("refreshToken", data.refreshToken);
         setTokenToLocalStorage("refreshTokenExpiresAt", data.refreshTokenExpiresAt);
         dispatch(login(data));
         localStorage.setItem("isAuth", JSON.stringify(true));

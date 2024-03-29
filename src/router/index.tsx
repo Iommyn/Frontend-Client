@@ -13,6 +13,7 @@ import RegisterConfirm from "../pages/auth/register/RegisterConfirm";
 import Recovered from "../pages/auth/recovery/Recovery";
 import RecoveryConfirm from "../pages/auth/recovery/RecoveryConfirm";
 import ServerOne from "../pages/servers/serverOne";
+import Settings from "../components/Сabinet/Settings";
 
 export interface RouteObject {
   path: string;
@@ -29,6 +30,7 @@ export const privateRoutes = [
   { path: "/rules", element: <Rules />, exact: true },
   { path: "/vote", element: <Vote />, exact: true },
   { path: "/cabinet", element: <Cabinet />, exact: true },
+  { path: "/balance", element: <Cabinet />, exact: true },
   { path: "/TechnoMagic", element: <ServerOne />, exact: true },
 ];
 

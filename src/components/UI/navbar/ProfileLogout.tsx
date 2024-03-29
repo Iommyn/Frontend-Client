@@ -39,6 +39,8 @@ const ProfileLogout: FC = () => {
     removeTokenFromLocalStorage("isAuth");
     removeTokenFromLocalStorage("username");
     removeTokenFromLocalStorage("tokenExpiresAt");
+    removeTokenFromLocalStorage('refreshToken');
+    removeTokenFromLocalStorage('refreshTokenExpiresAt');
     toast.info("Вы успешно вышли!");
     navigate("/");
   };
@@ -60,16 +62,13 @@ const ProfileLogout: FC = () => {
               Личный кабинет
             </Link>
             <div className="left-0 right-0 top-0 mb-[15px] mt-[17px] block h-[3px] bg-gray-600"></div>
-            <Link to="/cabinet" className={s.Item}>
+            <Link to="/balance" className={s.Item}>
               Пополнить баланс
             </Link>
           </div>
           <div className="left-0 right-0 top-0 mb-[15px] mt-[17px] block h-[4px] bg-gray-600"></div>
           <div className="inline-block">
             <div className="flex flex-col">
-              <Link to="#" className={s.Item}>
-                Настройки
-              </Link>
               <Link to="" className={s.Item} onClick={logoutHandler}>
                 Выйти
               </Link>
