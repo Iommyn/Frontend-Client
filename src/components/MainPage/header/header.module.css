@@ -13,7 +13,7 @@
 }
 
 .wrapper {
-  @apply mx-auto w-[1160px] mobile:w-[330px] tablet:w-[500px] sl:mt-[100px] sl:w-[400px] laptop:w-[400px] lg:mt-[50px] lg:w-[770px] sm:w-[1000px] desktop:w-[1170px];
+  @apply mx-auto w-[1160px] mobile:w-[330px] tablet:w-[500px] sl:mt-[100px] sl:w-[500px] laptop:w-[400px] lg:mt-[50px] lg:w-[950px] sm:w-[1000px] desktop:w-[1170px];
 }
 
 .slider {
@@ -53,7 +53,7 @@
 }
 
 .slide_img {
-  @apply mr-[-275px] w-[760px] mobile:hidden tablet:hidden sl:hidden laptop:mr-[60px] laptop:w-[500px] lg:mr-[-200px] lg:w-[430px] sm:mr-[-130px] sm:w-[500px] desktop:mr-[-160px] desktop:w-[650px];
+  @apply mr-[-175px] w-[660px] mobile:hidden tablet:hidden sl:hidden laptop:mr-[60px] laptop:w-[500px] lg:mr-[-100px] lg:w-[430px] sm:mr-[-130px] sm:w-[500px] desktop:mr-[-160px] desktop:w-[650px];
 }
 
 /* Here I was completely burned out and decided to write down the usual styles. I hope everything is clear :D */

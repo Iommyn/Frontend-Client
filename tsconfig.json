@@ -10,6 +10,6 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "jsx": "react",
-    "types": ["webpack-env", "jest"],
+    "types": ["webpack-env", "three", "jest"],
   }
 }

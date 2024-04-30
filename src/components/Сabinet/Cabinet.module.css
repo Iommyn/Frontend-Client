@@ -41,7 +41,7 @@
 }
 
 .tabsContainer {
-  @apply relative;
+  @apply relative mb-24
 }
 
 .grayLine {
@@ -71,7 +71,7 @@
 }
 
 .skin_btn {
-  @apply relative pl-[12px] w-[277px] text-[18px] font-ProximRegular h-[36px] border-2 rounded-[8px] border-none bg-gray-800 hover:bg-stone-600 hover:duration-0.3s hover:shadow-lg hover:shadow-stone-800 hover:text-gray-500 text-white inline-block before:top-[10px] before:my-0 before:absolute before:block  before:left-[60px] before:h-[50px] before:w-[50px] before:bg-no-repeat before:bg-[url('../../assets/page_cabinet/icons/skin.svg')]
+  @apply relative text-center pt-1 w-[277px] text-[18px] font-ProximRegular h-[36px] border-2 rounded-[8px] border-none bg-gray-800 hover:bg-stone-600 hover:duration-0.3s hover:shadow-lg hover:shadow-stone-800 hover:text-gray-500 text-white inline-block before:top-[10px] before:my-0 before:absolute before:block  before:left-[55px] before:h-[50px] before:w-[50px] before:bg-no-repeat before:bg-[url('../../assets/page_cabinet/icons/skin.svg')]
 }
 
 .skin_btn_delete {
@@ -79,7 +79,7 @@
 }
 
 .plaw_btn {
-  @apply relative pl-[12px] w-[277px] h-[36px] text-[18px] font-ProximRegular border-2 rounded-[8px] border-none bg-gray-800 hover:bg-stone-600 hover:duration-0.3s hover:shadow-lg hover:shadow-stone-800 hover:text-gray-500 text-white inline-block before:top-[10px] before:my-0 before:absolute before:block  before:left-[60px] before:h-[50px] before:w-[50px] before:bg-no-repeat before:bg-[url('../../assets/page_cabinet/icons/plaw.svg')]
+  @apply relative text-center pt-1 w-[277px] h-[36px] text-[18px] font-ProximRegular border-2 rounded-[8px] border-none bg-gray-800 hover:bg-stone-600 hover:duration-0.3s hover:shadow-lg hover:shadow-stone-800 hover:text-gray-500 text-white inline-block before:top-[10px] before:my-0 before:absolute before:block  before:left-[55px] before:h-[50px] before:w-[50px] before:bg-no-repeat before:bg-[url('../../assets/page_cabinet/icons/plaw.svg')]
 }
 
 .plaw_btn_delete {

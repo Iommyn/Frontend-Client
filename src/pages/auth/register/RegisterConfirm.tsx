@@ -26,27 +26,28 @@ const RegisterConfirm = () => {
     }
 
     return (
-        <section className={s.sectionConfirm}>
-            <div className='mb-[70px] flex justify-center'>
-                <Link to="/">
-                    <img src={Logo} alt="Логотип"/>
-                </Link>
-            </div>
-            <h1 className={s.h1_Confirm}>
-                Подтвердите регистрацию!
-            </h1>
-            <form className='flex justify-center mt-2' onSubmit={registerConfirmHandler}>
-                <div className="flex flex-col">
-                    <MyInput
-                        type="text"
-                        placeholder="Введите код"
-                        value={confirmationCode}
-                        onChange={(e) => setConfirmationCode(e.target.value)}
-                    />
-                    <MyButton>Продолжить</MyButton>
-                </div>
-            </form>
-        </section>
+      <section className={s.sectionConfirm}>
+          <div className='mb-[70px] flex justify-center'>
+              <Link to="/">
+                  <img src={Logo} alt="Логотип" />
+              </Link>
+          </div>
+          <h1 className={s.h1_Confirm}>
+              Подтвердите регистрацию!
+          </h1>
+          <h2 className={s.help}>Код находится на почте!</h2>
+          <form className='flex justify-center mt-2' onSubmit={registerConfirmHandler}>
+              <div className="flex flex-col">
+                  <MyInput
+                    type="text"
+                    placeholder="Введите код"
+                    value={confirmationCode}
+                    onChange={(e) => setConfirmationCode(e.target.value)}
+                  />
+                  <MyButton>Продолжить</MyButton>
+              </div>
+          </form>
+      </section>
     )
 };
 

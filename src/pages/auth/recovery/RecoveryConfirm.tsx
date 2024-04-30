@@ -36,6 +36,7 @@ const RecoveryConfirm = () => {
             <h1 className={s.h1_Confirm}>
                 Потверждение кода
             </h1>
+            <h2 className={s.help}>Код находится на почте!</h2>
             <form className='flex justify-center mt-2' onSubmit={registerConfirmHandler}>
                 <div className="flex flex-col">
                     <MyInput

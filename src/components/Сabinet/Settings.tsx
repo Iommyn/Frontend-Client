@@ -22,10 +22,12 @@ const Settings = () => {
   };
 
 
+
     const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (newPassword === confirmPassword) {
       await AuthService.refreshAccessToken(localStorage.getItem('refreshToken'));
+
       try {
         const data = await AuthService.resetPassword({ oldPassword, newPassword });
         if (data) {

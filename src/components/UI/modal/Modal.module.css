@@ -24,7 +24,7 @@
 }
 
 .balance {
-    @apply mx-[80px] w-[280px] h-[47px] bg-gray-700 px-4 text-white text-[22px] bg-gray-800;
+    @apply mx-[80px] w-[280px] h-[47px] px-4 text-white text-[22px] bg-gray-800;
 }
 .titleDtn {
     @apply text-white text-[30px] mx-[60px] font-extrabold mb-14

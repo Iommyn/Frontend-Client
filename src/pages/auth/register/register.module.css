@@ -10,8 +10,13 @@
   @apply text-center font-ProximExtraBold text-[42px] text-white;
 }
 
+
 .h1_Confirm {
   @apply mb-8 text-center font-ProximExtraBold text-[32px] text-white;
+}
+
+.help {
+  @apply mb-8 text-center font-ProximSemiBold text-[20px] text-gray-400;
 }
 
 .h1_input {

@@ -22,7 +22,6 @@ const TokenExpirationCheck = () => {
         const currentTime = new Date().getTime();
         const tokenExpirationString = localStorage.getItem('tokenExpiresAt');
         const tokenExpiration = moment(tokenExpirationString, 'YYYY-MM-DDTHH:mm:ss.SSSSSSSSSZ').valueOf();
-
         if (currentTime > tokenExpiration) {
           setTokenExpired(true);
           dispatch(logout());
@@ -32,7 +31,6 @@ const TokenExpirationCheck = () => {
           removeTokenFromLocalStorage('refreshToken');
           removeTokenFromLocalStorage('refreshTokenExpiresAt');
           removeTokenFromLocalStorage('username');
-          toast.warning('Срок действия токена истек, пожалуйста, авторизуйтесь снова');
           navigate("/auth");
         }
       };

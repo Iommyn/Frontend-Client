@@ -3,10 +3,26 @@ import {
   IUserData,
   IUserDataRecovery,
 } from "../types/types";
-import { instance } from "../api/axios.api";
+
+import axios from "axios";
+import { getTokenFromLocalStorage } from "../helpers/localstorage";
+
+
+const token = getTokenFromLocalStorage();
+const headers = token ? { Authorization: 'Bearer ' + token } : {};
+
+
+
+export const instance = axios.create({
+  withCredentials: true,
+  baseURL: 'https://auth.corecraft.ru',
+  headers: headers,
+});
+
 
 
 export const AuthService = {
+
   async login(userData: IUserData): Promise<any | undefined> {
     const { data } = await instance.post<IUserData>("/site/login", userData);
     localStorage.setItem("username", data.user.username);
@@ -38,12 +54,11 @@ export const AuthService = {
   },
 
 
-
-
   async Recovered(userData: IUserDataRecovery): Promise<any | undefined> {
     const { data } = await instance.post<IUserData>("/site/recovery", userData);
     return data;
   },
+
 
   async RecoveredConfirm(
     userData: IUserDataRecovery,
@@ -66,24 +81,25 @@ export const AuthService = {
   },
 
 
-  getSkin: async () => {
+  async refreshAccessToken(refreshToken: string): Promise<void> {
     try {
-      const { data } = await instance.post("/middleware/site/skin/add");
-      return data;
+      const { data } = await instance.post<{ token: string; tokenExpiresAt: string }>("/site/refresh", {
+        refreshToken: refreshToken,
+      });
+
+      instance.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
+
+      localStorage.removeItem("token");
+      localStorage.removeItem("tokenExpiresAt");
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("tokenExpiresAt", data.tokenExpiresAt);
     } catch (error) {
-      console.error("Ошибка при получении скина");
+      console.error("Ошибка при обновлении токена:", error);
+
+      localStorage.removeItem("token");
+      localStorage.removeItem("tokenExpiresAt");
     }
-  },
-
-  async refreshAccessToken(refreshToken: string): Promise<any | undefined> {
-    const { data } = await instance.post("/site/refresh", {
-      refreshToken: refreshToken,
-    });
-
-    localStorage.setItem("token", data.token);
-    localStorage.setItem("tokenExpiresAt", data.tokenExpiresAt);
-
-    instance.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
   }
 
 

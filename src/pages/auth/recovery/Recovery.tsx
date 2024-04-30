@@ -21,6 +21,11 @@ const Recovery = () => {
     try {
       e.preventDefault();
 
+      if (!recaptchaValue) {
+        toast.error("Пожалуйста, пройдите проверку reCAPTCHA");
+        return;
+      }
+
       const data = await AuthService.Recovered({ username, email });
       if (data) {
         toast.warning("Потвердите код, который находится на вашей почте!");
