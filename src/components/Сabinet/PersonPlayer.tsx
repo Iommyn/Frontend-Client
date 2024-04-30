@@ -54,7 +54,7 @@ function PersonPlayer() {
 
       setSkin(URL.createObjectURL(file));
     } catch (error) {
-      toast.error(error.response?.data?.message);
+      toast.error('Ошибка при загрузке скина');
     }
   };
 
@@ -72,7 +72,7 @@ function PersonPlayer() {
       setSkin(skinUrl);
 
     } catch (error) {
-      toast.error(error.response?.data?.message);
+      toast.error('Ошибка при удалении скина');
     }
   };
 
@@ -94,7 +94,7 @@ function PersonPlayer() {
 
       setCape(URL.createObjectURL(file));
     } catch (error) {
-      toast.error(error.response?.data?.message);
+      toast.error('Ошибка при загрузке плаща');
     }
   };
 
@@ -112,7 +112,7 @@ function PersonPlayer() {
       setCape(capeUrl);
 
     } catch (error) {
-      toast.error(error.response?.data?.message);
+      toast.error('Ошибка при удалении плаща');
     }
   };
 
